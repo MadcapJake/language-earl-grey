@@ -1,0 +1,23 @@
+{
+  "name": "language-earl-grey",
+  "version": "0.0.1",
+  "description": "Earl Grey language support in Atom",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madcapjake/language-earl-grey.git"
+  },
+  "keywords": [
+    "atom",
+    "syntax-highlighting",
+    "earl-grey"
+  ],
+  "author": "Jake Russo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madcapjake/language-earl-grey/issues"
+  },
+  "homepage": "https://github.com/madcapjake/language-earl-grey#readme"
+}
