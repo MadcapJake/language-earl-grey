@@ -1,9 +1,33 @@
+'scopeName': 'source.earl-grey'
 'fileTypes': [
   'eg'
 ]
 'name': 'Earl Grey'
 'patterns': [
   {
-
+    'begin': '(^[ \\t]+)?(?=;;)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.earl-grey'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': ';;'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.earl-grey'
+        'end': '\\n'
+        # Not sure why this is named with 'number-sign'
+        'name': 'comment.line.number-sign.earl-grey'
+      }
+    ]
+  }
+  {
+    'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
+    'name': 'constant.numeric.decimal.earl-grey'
+  }
+  {
+    'match': '\\b(\\d[0-9_]*[rR]\\w*(?:\\.\\w+)?)'
+    'name': 'constant.numeric.radix.earl-grey'
   }
 ]
