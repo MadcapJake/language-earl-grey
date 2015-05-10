@@ -6,12 +6,43 @@ Adds syntax highlighting, snippets, and repple support to Earl Grey files in Ato
 
 ## Todo
 
-* Everything
-* Everything else
-
-## Seriously though...
-
 * Syntax Highlighting
+  * ~~Comments~~
+  * ~~Numbers~~
+    * ~~Decimal~~
+    * ~~Radix~~
+  * Variables
+    * `let` keyword
+    * `var` keyword
+    * variable names
+    * `where` keyword
+    * `globals` keyword
+  * Strings
+    * Double quoted strings
+    * Escapes
+    * single-quoted strings
+    * single-quoted string interpolation
+    * prefix dot  strings
+  * Arrays/Objects
+    * array notation
+    * object notation
+    * object notation with string keys
+    * mixable array/object notation
+  * Functions
+    * Calling
+      * postcircumfix parens notation
+      * postcircumfix braces notation
+      * with-notation
+      * with-notation placeholders
+      * with-notation single argument
+      * prefix splicing operator
+      * bracket circumfix splicing operator
+      * juxtaposition splicing operator
+    * Declaring
+      * postfix `=` and block notation
+      * postfix `=` and arrow notation
+      * postfix `=` inline notation
+
 * Snippets
 * Repple support
 * Useful bindings
