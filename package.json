@@ -2,6 +2,10 @@
   "name": "language-earl-grey",
   "version": "0.0.2",
   "description": "Earl Grey language support in Atom",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
