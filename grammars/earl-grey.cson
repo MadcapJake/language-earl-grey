@@ -31,3 +31,16 @@
     'name': 'constant.numeric.radix.earl-grey'
   }
 ]
+'repository':
+  'definition_constructors':
+    'comment': "*Keywords starting definitions."
+    'match': '\\bclass\\b'
+    'name': 'definition.constructor.earl-grey'
+  'major_constructors':
+    'comment': "*Keywords starting important control structures."
+    'match': '\\b(if|then|else|match|for|while|chain|do|blocktest)\\b'
+    'name': 'control.constructor.earl-grey'
+  'special_constants':
+    'comment': "*Special constants."
+    'match': '\\b(true|false|null|undefined)\\b'
+    'name': 'constant.special.earl-grey'
