@@ -94,15 +94,18 @@
     'name': 'string.dotted.earl-grey'
   }
   {
-    'match': '(\\w[a-zA-Z0-9_-]\\w)(?:\\s+.+)+(?=\\:)'
+    'match': '(\\w[a-zA-Z0-9_-]\\w)(?:\\s+)+(?:\\.)+(?=\\:)'
     'name': 'keyword.control.colon-with-arg.earl-grey'
   }
 ]
 'repository':
-  'definition_constructors':
-    'comment': "*Keywords starting definitions."
-    'match': '\\bclass\\b'
-    'name': 'definition.constructor.earl-grey'
+  'symbols':
+    'comment': 'A symbol is any sequence of word characters and dashes'
+    'match': '\\b\\w[a-zA-Z0-9_-]*\\w\\b'
+    'name': 'keyword.control.symbol.earl-grey'
+  'operators':
+    'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with)\\b'
+    'name': 'keyword.operator.earl-gtrey'
   'major_constructors':
     'comment': "*Keywords starting important control structures."
     'match': '\\b(if|then|else|match|for|while|chain|do|blocktest)\\b'
