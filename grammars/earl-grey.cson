@@ -68,6 +68,7 @@
       '0':
         'name': 'punctuation.definition.string.dot.earl-grey'
     'end': '\\b'
+    'endCaptures':
       '0':
         'name': 'punctuation.definition.string.slash-b.earl-grey'
     'name': 'string.dotted.earl-grey'
