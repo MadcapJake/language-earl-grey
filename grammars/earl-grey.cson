@@ -50,6 +50,12 @@
       '0':
         'name': 'punctuation.definition.string.end.earl-grey'
     'name': 'string.quoted.double.earl-grey'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.earl-grey'
+      }
+    ]
   }
   {
     'begin': '\''
