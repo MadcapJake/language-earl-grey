@@ -18,11 +18,11 @@ Adds syntax highlighting, snippets, and repple support to Earl Grey files in Ato
     * `where` keyword
     * `globals` keyword
   * Strings
-    * Double quoted strings
+    * ~~Double quoted strings~~
     * Escapes
-    * single-quoted strings
+    * ~~single-quoted strings~~
     * single-quoted string interpolation
-    * prefix dot  strings
+    * ~~prefix dot strings~~
   * Arrays/Objects
     * array notation
     * object notation
