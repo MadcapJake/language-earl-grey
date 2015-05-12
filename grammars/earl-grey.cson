@@ -63,11 +63,11 @@
     'name': 'string.quoted.single.earl-grey'
   }
   {
-    'begin': '\\.(?:[a-zA-Z])'
+    'begin': '(\\.)(?=[a-zA-Z])'
     'beginCaptures':
       '0':
         'name': 'punctuation.definition.string.dot.earl-grey'
-    'end': '(?<=[a-zA-Z0-9_-])\\w(?:[^a-zA-Z0-9_-])'
+    'end': '(?<=[a-zA-Z0-9_-])(?:\\w)(?=[^a-zA-Z0-9_-])'
     'name': 'string.dotted.earl-grey'
   }
 ]
