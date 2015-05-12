@@ -51,6 +51,27 @@
         'name': 'punctuation.definition.string.end.earl-grey'
     'name': 'string.quoted.double.earl-grey'
   }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.earl-grey'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.earl-grey'
+    'name': 'string.quoted.double.earl-grey'
+  }
+  {
+    'begin': '\\.(?:[a-zA-Z])'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.dot.earl-grey'
+    'end': '\\b'
+      '0':
+        'name': 'punctuation.definition.string.slash-b.earl-grey'
+    'name': 'string.dotted.earl-grey'
+  }
 ]
 'repository':
   'definition_constructors':
