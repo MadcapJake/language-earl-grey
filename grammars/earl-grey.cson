@@ -105,7 +105,7 @@
     'name': 'keyword.control.symbol.earl-grey'
   'operators':
     'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with)\\b'
-    'name': 'keyword.operator.earl-gtrey'
+    'name': 'keyword.operator.earl-grey'
   'major_constructors':
     'comment': "*Keywords starting important control structures."
     'match': '\\b(if|then|else|match|for|while|chain|do|blocktest)\\b'
