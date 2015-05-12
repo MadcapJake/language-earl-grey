@@ -93,6 +93,10 @@
     'end': '(?<=[a-zA-Z0-9_-])(?:\\w)(?=[^a-zA-Z0-9_-])'
     'name': 'string.dotted.earl-grey'
   }
+  {
+    'match': '(\w(?:\w|-)\w)(?:\s+.+)+:'
+    'name': 'keyword.control.earl-grey'
+  }
 ]
 'repository':
   'definition_constructors':
