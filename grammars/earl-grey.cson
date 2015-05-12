@@ -29,6 +29,17 @@
     'match': '\\b(\\d[0-9_]*[rR]\\w*(?:\\.\\w+)?)'
     'name': 'constant.numeric.radix.earl-grey'
   }
+  {
+    'begin': '"{3}'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.earl-grey'
+    'end': '"{3}'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.earl-grey'
+    'name': 'string.quoted.multi-line.earl-grey'
+  }
 ]
 'repository':
   'definition_constructors':
