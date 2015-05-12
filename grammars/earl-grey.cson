@@ -60,7 +60,7 @@
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.earl-grey'
-    'name': 'string.quoted.double.earl-grey'
+    'name': 'string.quoted.single.earl-grey'
   }
   {
     'begin': '\\.(?:[a-zA-Z])'
