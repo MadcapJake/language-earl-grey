@@ -40,6 +40,17 @@
         'name': 'punctuation.definition.string.end.earl-grey'
     'name': 'string.quoted.multi-line.earl-grey'
   }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.earl-grey'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.earl-grey'
+    'name': 'string.quoted.double.earl-grey'
+  }
 ]
 'repository':
   'definition_constructors':
