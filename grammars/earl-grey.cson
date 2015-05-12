@@ -12,9 +12,9 @@
     'end': '(?!\\G)'
     'patterns': [
       {
-        'begin': '\\b(;;)'
+        'begin': ';;'
         'beginCaptures':
-          '1':
+          '0':
             'name': 'punctuation.definition.comment.earl-grey'
         'end': '\\n'
         'name': 'comment.line.double-semicolon.earl-grey'
