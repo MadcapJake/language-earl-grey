@@ -98,7 +98,7 @@
     'beginCaptures':
       '0':
         'name': 'keyword.control.form.key.earl-grey'
-    'end': '\\:'
+    'end': '\\.(?=\\:)'
     'name': 'keyword.control.form.earl-grey'
   }
 ]
