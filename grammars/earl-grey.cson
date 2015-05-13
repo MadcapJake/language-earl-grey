@@ -22,10 +22,10 @@
     ]
   }
   {
-    'include': '#numbers'
+    'include': '#number'
   }
   {
-    'include': '#strings'
+    'include': '#string'
   }
   {
     'begin': '(?<!:)\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+)'
