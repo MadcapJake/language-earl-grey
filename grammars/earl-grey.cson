@@ -85,14 +85,14 @@
       }
     ]
   }
-  {
-    'begin': '(\\.)(?=[a-zA-Z])'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.dot.earl-grey'
-    'end': '(?<=[a-zA-Z0-9_-])(?:\\w)(?=[^a-zA-Z0-9_-])'
-    'name': 'string.dotted.earl-grey'
-  }
+  # {
+  #   'begin': '(\\.)(?=[a-zA-Z])'
+  #   'beginCaptures':
+  #     '0':
+  #       'name': 'punctuation.definition.string.dot.earl-grey'
+  #   'end': '(?<=[a-zA-Z0-9_-])(?:\\w)(?=[^a-zA-Z0-9_-])'
+  #   'name': 'string.dotted.earl-grey'
+  # }
   # {
   #   'match':
   #     '\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+(\\w(?:[a-zA-Z0-9_-]*\\w)))?
