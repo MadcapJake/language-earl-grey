@@ -98,7 +98,7 @@
     'beginCaptures':
       '1':
         'name': 'keyword.control.symbol.key.earl-grey'
-    'end': '[;:\n\r]'
+    'end': '[;\n\r]'
     'name': 'meta.symbol.macro.earl-grey'
   }
 ]
