@@ -30,70 +30,7 @@
     'name': 'constant.numeric.radix.earl-grey'
   }
   {
-    'begin': '"{3}'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.earl-grey'
-    'end': '"{3}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.earl-grey'
-    'name': 'string.quoted.multi-line.earl-grey'
-  }
-  {
-    'begin': '"'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.earl-grey'
-    'end': '"'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.earl-grey'
-    'name': 'string.quoted.double.earl-grey'
-    'patterns': [
-      {
-        'match': '\\\\.'
-        'name': 'constant.character.escape.earl-grey'
-      }
-    ]
-  }
-  {
-    'begin': '\''
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.earl-grey'
-    'end': '\''
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.earl-grey'
-    'name': 'string.quoted.single.earl-grey'
-    'patterns': [
-      {
-        'match': '\\\\.'
-        'name': 'constant.character.escape.earl-grey'
-      }
-      {
-        'begin': '(?<!\\){'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.section.interpolation.begin.earl-grey'
-        'end': '(?<!\\)}'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.section.interpolation.end.earl-grey'
-        'name': 'source.earl-grey.embedded.source'
-      }
-    ]
-  }
-  {
-    'match': '(?<=\\s|^)(\\.)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?=[\\s;,:])'
-    'captures':
-      '1':
-        'name': 'punctuation.definition.string.dot.earl-grey'
-      '2':
-        'name': 'string.dotted.earl-grey'
-    'end': '(?<=[a-zA-Z0-9_-])(?:\\w)(?=[^a-zA-Z0-9_-])'
-    'name': 'meta.string.dotted.earl-grey'
+    'include': '#strings'
   }
   {
     'begin': '(?<!:)\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+)'
@@ -102,9 +39,86 @@
         'name': 'keyword.control.symbol.key.earl-grey'
     'end': '[;\n\r]'
     'name': 'meta.symbol.macro.earl-grey'
+    'patterns': [
+      {
+        'include': '#operator'
+      }
+      {
+        'include': '#strings'
+      }
+    ]
   }
 ]
 'repository':
+  'strings':
+    'patterns': [
+      {
+        'match': '(?<=\\s|^)(\\.)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?=[\\s;,:])'
+        'captures':
+          '1':
+            'name': 'punctuation.definition.string.dot.earl-grey'
+          '2':
+            'name': 'string.dotted.earl-grey'
+        'end': '(?<=[a-zA-Z0-9_-])(?:\\w)(?=[^a-zA-Z0-9_-])'
+        'name': 'meta.string.dotted.earl-grey'
+      }
+      {
+        'begin': '"{3}'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.earl-grey'
+        'end': '"{3}'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.earl-grey'
+        'name': 'string.quoted.multi-line.earl-grey'
+      }
+      {
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.earl-grey'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.earl-grey'
+        'name': 'string.quoted.double.earl-grey'
+        'patterns': [
+          {
+            'match': '\\\\.'
+            'name': 'constant.character.escape.earl-grey'
+          }
+        ]
+      }
+      {
+        'begin': '\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.earl-grey'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.earl-grey'
+        'name': 'string.quoted.single.earl-grey'
+        'patterns': [
+          {
+            'match': '\\\\.'
+            'name': 'constant.character.escape.earl-grey'
+          }
+          {
+            'begin': '(?<!\\){'
+            'beginCaptures':
+              '0':
+                'name': 'punctuation.section.interpolation.begin.earl-grey'
+            'end': '(?<!\\)}'
+            'endCaptures':
+              '0':
+                'name': 'punctuation.section.interpolation.end.earl-grey'
+            'name': 'source.earl-grey.embedded.source'
+          }
+        ]
+      }
+    ]
   'symbol':
     'patterns': [
       {
