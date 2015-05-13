@@ -1,6 +1,8 @@
 ;; Strings
 "Hello World!"
 "Hello!\nWorld!"
+'sasadads\ssdasdasd{}'
+.dotted-string
 
 key x
 key +x; key @x; key .x ; key "x"; key 0; .asdasd
