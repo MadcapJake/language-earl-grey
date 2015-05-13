@@ -39,16 +39,16 @@
         'include': '#operator'
       }
       {
-        'include': '#strings'
+        'include': '#string'
       }
       {
-        'include': '#numbers'
+        'include': '#number'
       }
     ]
   }
 ]
 'repository':
-  'numbers':
+  'number':
     'patterns': [
       {
         'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
@@ -59,7 +59,7 @@
         'name': 'constant.numeric.radix.earl-grey'
       }
     ]
-  'strings':
+  'string':
     'patterns': [
       {
         'match': '(?<=\\s|^)(\\.)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?=[\\s;,:])'
