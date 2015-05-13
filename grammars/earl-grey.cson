@@ -68,7 +68,7 @@
   string:
     'patterns': [
       {
-        'match': '(?<=\\s|^)(\\.)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?=[\\s;,:])'
+        'match': '(\\.)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?=[\\s;,:])'
         'captures':
           '1':
             'name': 'punctuation.definition.string.dot.earl-grey'
