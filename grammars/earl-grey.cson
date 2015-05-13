@@ -99,7 +99,7 @@
       '0':
         'name': 'keyword.control.form.key.earl-grey'
     'end': '\\:'
-    'match':    'name': 'keyword.control.form.earl-grey'
+    'name': 'keyword.control.form.earl-grey'
   }
 ]
 'repository':
