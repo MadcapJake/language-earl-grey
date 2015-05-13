@@ -96,7 +96,7 @@
   {
     'begin': '([a-zA-Z0-9_-]*)(?=\\s)'
     'beginCaptures':
-      '0':
+      '1':
         'name': 'keyword.control.form.key.earl-grey'
     'end': '([a-zA-Z0-9_-]|\\"|\')(?=\\:)'
     'name': 'meta.control.form.earl-grey'
