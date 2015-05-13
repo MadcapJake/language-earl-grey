@@ -4,59 +4,59 @@
 ]
 'name': 'Earl Grey'
 'patterns': [
-  {
-    'begin': '(^[ \\t]+)?(?=;;)'
-    'beginCaptures':
-      '1':
-        'name': 'punctuation.whitespace.comment.leading.earl-grey'
-    'end': '(?!\\G)'
-    'patterns': [
-      {
-        'begin': ';;'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.definition.comment.earl-grey'
-        'end': '\\n'
-        'name': 'comment.line.double-semicolon.earl-grey'
-      }
-    ]
-  }
-  {
-    'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
-    'name': 'constant.numeric.decimal.earl-grey'
-  }
-  {
-    'match': '\\b(\\d[0-9_]*[rR]\\w*(?:\\.\\w+)?)'
-    'name': 'constant.numeric.radix.earl-grey'
-  }
-  {
-    'begin': '"{3}'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.earl-grey'
-    'end': '"{3}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.earl-grey'
-    'name': 'string.quoted.multi-line.earl-grey'
-  }
-  {
-    'begin': '"'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.earl-grey'
-    'end': '"'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.earl-grey'
-    'name': 'string.quoted.double.earl-grey'
-    'patterns': [
-      {
-        'match': '\\\\.'
-        'name': 'constant.character.escape.earl-grey'
-      }
-    ]
-  }
+  # {
+  #   'begin': '(^[ \\t]+)?(?=;;)'
+  #   'beginCaptures':
+  #     '1':
+  #       'name': 'punctuation.whitespace.comment.leading.earl-grey'
+  #   'end': '(?!\\G)'
+  #   'patterns': [
+  #     {
+  #       'begin': ';;'
+  #       'beginCaptures':
+  #         '0':
+  #           'name': 'punctuation.definition.comment.earl-grey'
+  #       'end': '\\n'
+  #       'name': 'comment.line.double-semicolon.earl-grey'
+  #     }
+  #   ]
+  # }
+  # {
+  #   'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
+  #   'name': 'constant.numeric.decimal.earl-grey'
+  # }
+  # {
+  #   'match': '\\b(\\d[0-9_]*[rR]\\w*(?:\\.\\w+)?)'
+  #   'name': 'constant.numeric.radix.earl-grey'
+  # }
+  # {
+  #   'begin': '"{3}'
+  #   'beginCaptures':
+  #     '0':
+  #       'name': 'punctuation.definition.string.begin.earl-grey'
+  #   'end': '"{3}'
+  #   'endCaptures':
+  #     '0':
+  #       'name': 'punctuation.definition.string.end.earl-grey'
+  #   'name': 'string.quoted.multi-line.earl-grey'
+  # }
+  # {
+  #   'begin': '"'
+  #   'beginCaptures':
+  #     '0':
+  #       'name': 'punctuation.definition.string.begin.earl-grey'
+  #   'end': '"'
+  #   'endCaptures':
+  #     '0':
+  #       'name': 'punctuation.definition.string.end.earl-grey'
+  #   'name': 'string.quoted.double.earl-grey'
+  #   'patterns': [
+  #     {
+  #       'match': '\\\\.'
+  #       'name': 'constant.character.escape.earl-grey'
+  #     }
+  #   ]
+  # }
   # {
   #   'begin': '\''
   #   'beginCaptures':
