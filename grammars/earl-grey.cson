@@ -73,11 +73,11 @@
         'name': 'constant.character.escape.earl-grey'
       }
       {
-        'begin': '(?<!\\\\){'
+        'begin': '(?<!\\){'
         'beginCaptures':
           '0':
             'name': 'punctuation.section.interpolation.begin.earl-grey'
-        'end': '(?<!\\\\)}'
+        'end': '(?<!\\)}'
         'endCaptures':
           '0':
             'name': 'punctuation.section.interpolation.end.earl-grey'
@@ -99,18 +99,18 @@
   }
 ]
 'repository':
-  'symbols':
-    'comment': 'A symbol is any sequence of word characters and dashes'
-    'match': '\\b\\w[a-zA-Z0-9_-]*\\w\\b'
-    'name': 'keyword.control.symbol.earl-grey'
-  'operators':
-    'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with)\\b'
-    'name': 'keyword.operator.earl-grey'
-  'major_constructors':
-    'comment': "*Keywords starting important control structures."
-    'match': '\\b(if|then|else|match|for|while|chain|do|blocktest)\\b'
-    'name': 'control.constructor.earl-grey'
-  'special_constants':
-    'comment': "*Special constants."
-    'match': '\\b(true|false|null|undefined)\\b'
-    'name': 'constant.special.earl-grey'
+  'symbol':
+    'patterns': [
+      {
+        'comment': 'A symbol is any sequence of word characters and dashes'
+        'match': '\\b\\w[a-zA-Z0-9_-]*\\w\\b'
+        'name': 'keyword.control.symbol.earl-grey'
+      }
+    ]
+  'operator':
+    'patterns': [
+      {
+        'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and\\=|or\=|mod\=|each\=|each\*|each*=|is\*|not\*\*\*)\\b'
+        'name': 'keyword.operator.earl-grey'
+      }
+    ]
