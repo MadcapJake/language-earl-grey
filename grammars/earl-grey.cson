@@ -94,7 +94,7 @@
     'name': 'string.dotted.earl-grey'
   }
   {
-    'begin': '\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+)'
+    'begin': '(?<!:)\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+)'
     'beginCaptures':
       '1':
         'name': 'keyword.control.symbol.key.earl-grey'
