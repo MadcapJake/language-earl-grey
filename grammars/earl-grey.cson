@@ -28,26 +28,32 @@
     'include': '#string'
   }
   {
-    'begin': '(?<!:)\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+)'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.symbol.key.earl-grey'
-    'end': '[;\n\r]'
-    'name': 'meta.symbol.macro.earl-grey'
-    'patterns': [
-      {
-        'include': '#operator'
-      }
-      {
-        'include': '#string'
-      }
-      {
-        'include': '#number'
-      }
-    ]
+    'include': '#keyword'
   }
 ]
 'repository':
+  'keyword':
+    'patterns': [
+      {
+        'begin': '(?<!:)\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+)'
+        'beginCaptures':
+          '1':
+            'name': 'keyword.control.symbol.key.earl-grey'
+        'end': '[;\n\r]'
+        'name': 'meta.symbol.macro.earl-grey'
+        'patterns': [
+          {
+            'include': '#operator'
+          }
+          {
+            'include': '#string'
+          }
+          {
+            'include': '#number'
+          }
+        ]
+      }
+    ]
   'number':
     'patterns': [
       {
