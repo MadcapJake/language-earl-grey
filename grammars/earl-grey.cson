@@ -98,7 +98,7 @@
     'beginCaptures':
       '0':
         'name': 'keyword.control.form.key.earl-grey'
-    'end': '\\.(?=\\:)'
+    'end': '[a-zA-Z0-9_-\\"\\'](?=\\:)'
     'name': 'keyword.control.form.earl-grey'
   }
 ]
