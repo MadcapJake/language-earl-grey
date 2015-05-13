@@ -57,34 +57,34 @@
       }
     ]
   }
-  {
-    'begin': '\''
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.earl-grey'
-    'end': '\''
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.earl-grey'
-    'name': 'string.quoted.single.earl-grey'
-    'patterns': [
-      {
-        'match': '\\\\.'
-        'name': 'constant.character.escape.earl-grey'
-      }
-      {
-        'begin': '(?<!\\){'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.section.interpolation.begin.earl-grey'
-        'end': '(?<!\\)}'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.section.interpolation.end.earl-grey'
-        'name': 'source.earl-grey.embedded.source'
-      }
-    ]
-  }
+  # {
+  #   'begin': '\''
+  #   'beginCaptures':
+  #     '0':
+  #       'name': 'punctuation.definition.string.begin.earl-grey'
+  #   'end': '\''
+  #   'endCaptures':
+  #     '0':
+  #       'name': 'punctuation.definition.string.end.earl-grey'
+  #   'name': 'string.quoted.single.earl-grey'
+  #   'patterns': [
+  #     {
+  #       'match': '\\\\.'
+  #       'name': 'constant.character.escape.earl-grey'
+  #     }
+  #     {
+  #       'begin': '(?<!\\){'
+  #       'beginCaptures':
+  #         '0':
+  #           'name': 'punctuation.section.interpolation.begin.earl-grey'
+  #       'end': '(?<!\\)}'
+  #       'endCaptures':
+  #         '0':
+  #           'name': 'punctuation.section.interpolation.end.earl-grey'
+  #       'name': 'source.earl-grey.embedded.source'
+  #     }
+  #   ]
+  # }
   # {
   #   'begin': '(\\.)(?=[a-zA-Z])'
   #   'beginCaptures':
