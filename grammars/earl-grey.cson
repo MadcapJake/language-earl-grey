@@ -32,7 +32,7 @@
   }
 ]
 'repository':
-  'keyword':
+  keyword:
     'patterns': [
       {
         'begin': '(?<!:)\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+)'
@@ -54,7 +54,7 @@
         ]
       }
     ]
-  'number':
+  number:
     'patterns': [
       {
         'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
@@ -65,7 +65,7 @@
         'name': 'constant.numeric.radix.earl-grey'
       }
     ]
-  'string':
+  string:
     'patterns': [
       {
         'match': '(?<=\\s|^)(\\.)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?=[\\s;,:])'
@@ -139,7 +139,7 @@
         ]
       }
     ]
-  'symbol':
+  symbol:
     'patterns': [
       {
         'comment': 'A symbol is any sequence of word characters and dashes'
@@ -147,10 +147,11 @@
         'name': 'keyword.control.symbol.earl-grey'
       }
     ]
-  'operator':
+  operatorT:
     'patterns': [
       {
-        'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and\\=|or\=|mod\=|each\=|each\*|each*=|is\*|not\*\*\*)\\b'
+        'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and\\=|or\=
+        |mod\=|each\=|each\*|each*=|is\*|not\*\*\*)\\b'
         'name': 'keyword.operator.earl-grey'
       }
     ]

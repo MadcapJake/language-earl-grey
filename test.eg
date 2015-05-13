@@ -1,7 +1,7 @@
 ;; Strings
 "Hello World!"
 "Hello!\nWorld!"
-'sasadads\ssdasdasd{}'
+'sasadads\ssdasdasd{  }'
 .dotted-string
 
 key x
