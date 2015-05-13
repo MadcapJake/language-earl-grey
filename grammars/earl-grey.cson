@@ -105,19 +105,19 @@
   #   'name': 'meta.symbol.macro.earl-grey'
   # }
 ]
-'repository':
-  'symbol':
-    'patterns': [
-      {
-        'comment': 'A symbol is any sequence of word characters and dashes'
-        'match': '\\b\\w[a-zA-Z0-9_-]*\\w\\b'
-        'name': 'keyword.control.symbol.earl-grey'
-      }
-    ]
-  'operator':
-    'patterns': [
-      {
-        'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and\\=|or\=|mod\=|each\=|each\*|each*=|is\*|not\*\*\*)\\b'
-        'name': 'keyword.operator.earl-grey'
-      }
-    ]
+# 'repository':
+#   'symbol':
+#     'patterns': [
+#       {
+#         'comment': 'A symbol is any sequence of word characters and dashes'
+#         'match': '\\b\\w[a-zA-Z0-9_-]*\\w\\b'
+#         'name': 'keyword.control.symbol.earl-grey'
+#       }
+#     ]
+#   'operator':
+#     'patterns': [
+#       {
+#         'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and\\=|or\=|mod\=|each\=|each\*|each*=|is\*|not\*\*\*)\\b'
+#         'name': 'keyword.operator.earl-grey'
+#       }
+#     ]
