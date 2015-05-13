@@ -114,17 +114,17 @@
             'match': '\\\\.'
             'name': 'constant.character.escape.earl-grey'
           }
-          # {
-          #   'begin': '(?<!\\)\\{'
-          #   'beginCaptures':
-          #     '0':
-          #       'name': 'punctuation.section.interpolation.begin.earl-grey'
-          #   'end': '(?<!\\)\\}'
-          #   'endCaptures':
-          #     '0':
-          #       'name': 'punctuation.section.interpolation.end.earl-grey'
-          #   'name': 'source.earl-grey.embedded.source'
-          # }
+          {
+            'begin': '(?<!\\\)\\{'
+            'beginCaptures':
+              '0':
+                'name': 'punctuation.section.interpolation.begin.earl-grey'
+            'end': '(?<!\\\)\\}'
+            'endCaptures':
+              '0':
+                'name': 'punctuation.section.interpolation.end.earl-grey'
+            'name': 'source.earl-grey.embedded.source'
+          }
         ]
       }
     ]
