@@ -115,11 +115,11 @@
             'name': 'constant.character.escape.earl-grey'
           }
           {
-            'begin': '(?<!\\\)\\{'
+            'begin': '(?<!\\\\)\\{'
             'beginCaptures':
               '0':
                 'name': 'punctuation.section.interpolation.begin.earl-grey'
-            'end': '(?<!\\\)\\}'
+            'end': '(?<!\\\\)\\}'
             'endCaptures':
               '0':
                 'name': 'punctuation.section.interpolation.end.earl-grey'
