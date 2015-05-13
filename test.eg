@@ -1,13 +1,16 @@
+;; Strings
+"Hello World!"
+"Hello!\nWorld!"
+
 key x
-key +x; key @x; key .x; key "x"; key 0
+key +x; key @x; key .x ; key "x"; key 0; .asdasd
 key (x); key [x]; key {x}
 nokey.x; nokey{x}
-.asdsad-aasdasd sadasd
 key x + y
 key key x
 x + key y
 nokey + x
-
+nokey
 key: x
 key nokey: y
 key x > nokey: z

@@ -22,12 +22,7 @@
     ]
   }
   {
-    'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
-    'name': 'constant.numeric.decimal.earl-grey'
-  }
-  {
-    'match': '\\b(\\d[0-9_]*[rR]\\w*(?:\\.\\w+)?)'
-    'name': 'constant.numeric.radix.earl-grey'
+    'include': '#numbers'
   }
   {
     'include': '#strings'
@@ -46,10 +41,24 @@
       {
         'include': '#strings'
       }
+      {
+        'include': '#numbers'
+      }
     ]
   }
 ]
 'repository':
+  'numbers':
+    'patterns': [
+      {
+        'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
+        'name': 'constant.numeric.decimal.earl-grey'
+      }
+      {
+        'match': '\\b(\\d[0-9_]*[rR]\\w*(?:\\.\\w+)?)'
+        'name': 'constant.numeric.radix.earl-grey'
+      }
+    ]
   'strings':
     'patterns': [
       {
