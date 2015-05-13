@@ -147,7 +147,7 @@
         'name': 'keyword.control.symbol.earl-grey'
       }
     ]
-  operatorT:
+  operator:
     'patterns': [
       {
         'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and\\=|or\=
