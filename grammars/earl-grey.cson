@@ -86,12 +86,14 @@
     ]
   }
   {
-    'begin': '(\\.)(?=[a-zA-Z])'
-    'beginCaptures':
-      '0':
+    'match': '(?<=\\s)(\\.)(\\w(?:[a-zA-Z0-9_-]*\\w)?)\\b'
+    'captures':
+      '1':
         'name': 'punctuation.definition.string.dot.earl-grey'
+      '2':
+        'name': 'string.dotted.earl-grey'
     'end': '(?<=[a-zA-Z0-9_-])(?:\\w)(?=[^a-zA-Z0-9_-])'
-    'name': 'string.dotted.earl-grey'
+    'name': 'meta.string.dotted.earl-grey'
   }
   {
     'begin': '(?<!:)\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+)'
