@@ -94,8 +94,12 @@
     'name': 'string.dotted.earl-grey'
   }
   {
-    'match': '(\\w[a-zA-Z0-9_-]\\w)(?:\\s+)+(?:\\.)+(?=\\:)'
-    'name': 'keyword.control.colon-with-arg.earl-grey'
+    'begin': '([a-zA-Z0-9_-]*)(?=\\s)'
+    'beginCaptures':
+      '0':
+        'name': 'keyword.control.form.key.earl-grey'
+    'end': '\\:'
+    'match':    'name': 'keyword.control.form.earl-grey'
   }
 ]
 'repository':
