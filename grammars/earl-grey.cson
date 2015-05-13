@@ -118,12 +118,17 @@
             'begin': '(?<!\\\\\)\\{'
             'beginCaptures':
               '0':
-                'name': 'punctuation.section.interpolation.begin.earl-grey'
+                'name': 'punctuation.section.embedded.begin.earl-grey'
             'end': '(?<!\\\\\)\\}'
             'endCaptures':
               '0':
-                'name': 'punctuation.section.interpolation.end.earl-grey'
+                'name': 'punctuation.section.embedded.end.earl-grey'
             'name': 'source.earl-grey.embedded.source'
+            'patterns': [
+              {
+                'include': '$self'
+              }
+            ]
           }
         ]
       }
