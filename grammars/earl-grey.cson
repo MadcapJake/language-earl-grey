@@ -94,7 +94,7 @@
     'name': 'string.dotted.earl-grey'
   }
   {
-    'match': '\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+(\\w(?:[a-zA-Z0-9_-]*\\w)))?(?:[^a-bA-Z0-9_-])'
+    'match': '\\b(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?:\\s+(\\w(?:[a-zA-Z0-9_-]*\\w)))?'
     'captures':
       '1':
         'name': 'keyword.control.symbol.key.earl-grey'
@@ -115,7 +115,7 @@
   'operator':
     'patterns': [
       {
-        'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and\\=|or\=|mod\=|each\=|each\*|each*=|is\*|not\*\*\*)\\b'
+        'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and=|or=|mod=|each=|each*|each*=|is*|not***)\\b'
         'name': 'keyword.operator.earl-grey'
       }
     ]
