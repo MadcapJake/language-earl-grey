@@ -2,7 +2,7 @@ key x
 key +x; key @x; key .x; key "x"; key 0
 key (x); key [x]; key {x}
 nokey.x; nokey{x}
-
+.asdsad-aasdasd sadasd
 key x + y
 key key x
 x + key y
