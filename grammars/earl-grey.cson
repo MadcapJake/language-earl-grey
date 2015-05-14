@@ -171,6 +171,6 @@
       }
       {
         'match': '(?<![\\w\\$])([+\\-*/~^<>=%&|?!#]+)(?=[\\s\\w\\$\\-])|([.@](?=\\s))'
-        'name': 'invalid.illegal.char.earl-grey'
+        'name': 'keyword.operator.char.earl-grey'
       }
     ]
