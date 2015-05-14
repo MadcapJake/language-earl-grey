@@ -49,6 +49,9 @@
         'name': 'meta.symbol.macro.earl-grey'
         'patterns': [
           {
+            'include': '#keyword'
+          }
+          {
             'include': '#operator'
           }
           {
