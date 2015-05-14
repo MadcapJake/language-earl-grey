@@ -143,6 +143,9 @@
               {
                 'include': '$self'
               }
+              {
+                'include': '#symbol'
+              }
             ]
           }
         ]
