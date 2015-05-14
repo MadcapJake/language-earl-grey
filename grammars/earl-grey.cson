@@ -159,7 +159,7 @@
     'patterns': [
       {
         'comment': 'A symbol is any sequence of word characters and dashes'
-        'match': '\\b[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?\\b'
+        'match': '\\b[\\w\\$](?:[\\w\\$\\-]*[\\w\\$])?\\b'
         'name': 'variable.other.symbol.earl-grey'
       }
     ]
