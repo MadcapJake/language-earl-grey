@@ -176,7 +176,7 @@
         'name': 'keyword.operator.char.earl-grey'
       }
       {
-        'match': '(?<=\\s)(each|with|where|when|and|not|or|in|mod|as|of|is)(?![\\w\\$\\-])'
+        'match': '(?<=\\s)((?:each|with|where|when|and|not|or|in|mod|as|of|is)\\*?)(?![\\w\\$\\-])'
         'name': 'keyword.other.word-op.earl-grey'
       }
     ]
