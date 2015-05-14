@@ -166,4 +166,8 @@
         'match': '\\b(with|where|when|and|not|or|in|mod|each|as|of|is)\\b'
         'name': 'keyword.operator.word.earl-grey'
       }
+      {
+        'match': '[+\\-*/~^<>=%&|?!@#.]+'
+        'name': 'keyword.operator.char.earl-grey'
+      }
     ]
