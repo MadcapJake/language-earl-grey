@@ -170,7 +170,7 @@
         'name': 'keyword.operator.word.earl-grey'
       }
       {
-        'match': '[+\\-*/~^<>=%&|?!#.]+'
+        'match': '([+\\-*/~^<>=%&|?!#.]+)'
         'name': 'keyword.operator.char.earl-grey'
       }
     ]
