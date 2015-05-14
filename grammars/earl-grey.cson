@@ -160,7 +160,7 @@
       {
         'comment': 'A symbol is any sequence of word characters and dashes'
         'match': '\\b[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?\\b'
-        'name': 'keyword.control.symbol.earl-grey'
+        'name': 'variable.other.symbol.earl-grey'
       }
     ]
   operator:
