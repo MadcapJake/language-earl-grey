@@ -38,7 +38,7 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?:(?<!:)\\s*)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?!\\.)(?:\\s+)'
+        'begin': '(?:(?<!:)\\s*)(?<!@)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?!\\.)(?:\\s+)'
         'beginCaptures':
           '1':
             'name': 'keyword.control.symbol.key.earl-grey'
