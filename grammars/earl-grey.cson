@@ -163,7 +163,7 @@
   operator:
     'patterns': [
       {
-        'match': '\\b(as|each|in|is|mod|not|of|or|when|where|with|and\\=|or\=|mod\=|each\=|each\*|each*=|is\*|not\*\*\*)\\b'
+        'match': '\\b(with|where|when|and|not|or|in|mod|each|as|of|is)\\b'
         'name': 'keyword.operator.word.earl-grey'
       }
     ]
