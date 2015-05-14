@@ -41,7 +41,7 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?:^\\s*|[;=%,]\\s+|(?:each\\*?|where|with)\\s+)([a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?!$)(?:\\s+|:)(?!(?:[+\\-*/%&=]{1,2}|as|each|in|is|mod|not|of|or|when|where|with|and)[\\s:])'
+        'begin': '(?:^\\s*|[;=%,]\\s+|(?:each|where|with)\\*?\\s+)([a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?!$)(?:\\s+|:)(?!(?:[+\\-*/%&=]{1,2}|as|each|in|is|mod|not|of|or|when|where|with|and)[\\s:])'
         'beginCaptures':
           '1':
             'name': 'keyword.control.symbol.key.earl-grey'
