@@ -38,7 +38,7 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?:^[\\s\\t]*|[;=%,]\\s+|(?:each|each\\*|where|with)\\s+)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?!$)(?:\\s+|:)(?!(?:[+\\-*/%&=]{1,2}|as|each|in|is|mod|not|of|or|when|where|with|and)[\\s:])'
+        'begin': '(?:^[\\s\\t]*|[;=%,]\\s+|(?:each|each\\*|where|with)\\s+)([a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?!$)(?:\\s+|:)(?!(?:[+\\-*/%&=]{1,2}|as|each|in|is|mod|not|of|or|when|where|with|and)[\\s:])'
         'beginCaptures':
           '1':
             'name': 'keyword.control.symbol.key.earl-grey'
@@ -74,13 +74,13 @@
   string:
     'patterns': [
       {
-        'match': '(\\.)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?=[\\s;,:])'
+        'match': '(\\.)([a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?=[\\s;,:])'
         'captures':
           '1':
             'name': 'punctuation.definition.string.dot.earl-grey'
           '2':
             'name': 'string.dotted.earl-grey'
-        'end': '(?<=[a-zA-Z0-9_-])(?:\\w)(?=[^a-zA-Z0-9_-])'
+        'end': '(?<=[a-zA-Z$_0-9-])(?:[a-zA-Z$_0-9])(?=[^a-zA-Z$_0-9-])'
         'name': 'meta.string.dotted.earl-grey'
       }
       {
@@ -148,7 +148,7 @@
   method:
     'patterns': [
       {
-        'match': '\\b(@\\w(?:[a-zA-Z0-9_-]*\\w)?)\\b'
+        'match': '\\b(@[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\b'
         'name': 'entity.attribute-name.method.earl-grey'
       }
     ]
@@ -156,7 +156,7 @@
     'patterns': [
       {
         'comment': 'A symbol is any sequence of word characters and dashes'
-        'match': '\\b\\w[a-zA-Z0-9_-]*\\w\\b'
+        'match': '\\b[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?\\b'
         'name': 'keyword.control.symbol.earl-grey'
       }
     ]
