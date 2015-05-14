@@ -23,10 +23,13 @@ x + key nokey: z
 
 x + nokey: y
 x mod nokey: y
-x = key: y
+x = key: y ;; comments work after keywords!
 x each key: y
+x each k
 
-nokey mod: y      ;; do not highlight nokey, because mod is an operator
+nokey mod: y ;; do not highlight nokey
+;; because mod is an operator
 
 ;; Highlight all of these:
-await; break; chain; continue; else; expr-value; match; return; yield
+await; break; chain; continue; else; expr-value
+match; return; yield
