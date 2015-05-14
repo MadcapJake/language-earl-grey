@@ -148,7 +148,7 @@
   method:
     'patterns': [
       {
-        'match': '\\b(@[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\b'
+        'match': '(?<=^|\\s)(@[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\b'
         'name': 'entity.attribute-name.method.earl-grey'
       }
     ]
