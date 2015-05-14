@@ -163,7 +163,7 @@
       {
         'comment': 'A symbol is any sequence of word characters and dashes'
         'match': '\\b[\\w\\$](?:[\\w\\$\\-]*[\\w\\$])?\\b'
-        'name': 'variable.other.symbol.earl-grey'
+        'name': 'keyword.other.symbol.earl-grey'
       }
     ]
   operator:
