@@ -30,6 +30,9 @@
   {
     'include': '#keyword'
   }
+  {
+    'include': '#method'
+  }
 ]
 'repository':
   keyword:
@@ -50,6 +53,9 @@
           }
           {
             'include': '#number'
+          }
+          {
+            'include': '#method'
           }
         ]
       }
@@ -137,6 +143,13 @@
             ]
           }
         ]
+      }
+    ]
+  method:
+    'patterns': [
+      {
+        'match': '\\b(@\\w(?:[a-zA-Z0-9_-]*\\w)?)\\b'
+        'name': 'entity.attribute-name.method.earl-grey'
       }
     ]
   symbol:
