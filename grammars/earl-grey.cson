@@ -172,7 +172,7 @@
   operator:
     'patterns': [
       {
-        'match': '([+\\-*/~^<>=%&|?!#]+)(?=[\\s\\w\\$])|([.@](?=\\s))'
+        'match': '([+\\-*/~^<>=%&|?!#]+)(?!\\s*:)|([\\.@](?=\\s))'
         'name': 'keyword.operator.char.earl-grey'
       }
       {
