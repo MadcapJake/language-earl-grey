@@ -1,7 +1,7 @@
 ;; Strings
 "Hello World!"
 "Hello!\nWorld!"
-'sasadads\ssdasdasd{  }'
+'sasadads\ssdasdasd{ @method variable }'
 .dotted-string
 
 key-dash
