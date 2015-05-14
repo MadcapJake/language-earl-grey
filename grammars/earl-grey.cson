@@ -38,7 +38,7 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?:^[\s\t]*|[;=%,]\s+|(?:each|each\*|where|with)\s+)(\w(?:[a-zA-Z0-9_-]*\w)?)(?!$)(?:\s+|:)(?!(?:[+\-*/%&=]{1,2}|as|each|in|is|mod|not|of|or|when|where|with|and)[\s:])'
+        'begin': '(?:^[\\s\\t]*|[;=%,]\\s+|(?:each|each\\*|where|with)\\s+)(\\w(?:[a-zA-Z0-9_-]*\\w)?)(?!$)(?:\\s+|:)(?!(?:[+\\-*/%&=]{1,2}|as|each|in|is|mod|not|of|or|when|where|with|and)[\\s:])'
         'beginCaptures':
           '1':
             'name': 'keyword.control.symbol.key.earl-grey'
