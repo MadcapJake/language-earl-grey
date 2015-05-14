@@ -22,6 +22,9 @@
     ]
   }
   {
+    'include': '#operator'
+  }
+  {
     'include': '#number'
   }
   {
