@@ -1,6 +1,6 @@
 {
   "name": "language-earl-grey",
-  "version": "0.3.16",
+  "version": "0.3.17",
   "description": "Earl Grey language support in Atom",
   "engines": {
     "atom": "*",
