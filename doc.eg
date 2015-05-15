@@ -1,13 +1,13 @@
 ;; This is the Earl Grey docs page turned into EG with comments for markup
 
-;; Basic Syntax
+;; #Basic Syntax
 
-;; Comments
+;; ##Comments
 ;; Comments must be prefixed with two semicolons until the end of the line.
 
 ;; ;; This is a comment
 
-;; Blocks
+;; ##Blocks
 ;; Indent groups statements in Earl Grey. Alternatively, you can use square
 ;; brackets `[]`:
 
@@ -39,7 +39,7 @@ a + b + c
 ;; Be aware that indent isn't going to work for this: replacing the backslashes
 ;; with indent will yield `a[+ b; + c]`.
 
-;; Variables
+;; ##Variables
 
 ;; Variables can be declared as mutable or immutable:
 
@@ -72,3 +72,52 @@ x = {1, 2, 3}
 ;; instance:
 
 {var {x, y}, let z} = {{1, 2}, 3}  ;; x and y are mutable; z isn't
+
+;; The _where_ statement is another alternative to declare variables local to
+;; single expression.  Here's a funny example:
+
+x + y where
+   x = 100
+   y = 200
+   x + y = x - y  ;; => -100
+
+;; Yes, you can do that
+
+;; ##Global variables
+;; Global variables need to be declared to be accessible:
+
+globals:
+   document, google, React
+
+;; #Literals and Data Structurs
+
+;; ##Strings
+;; Use double quotes:
+
+"this is a string"
+"Escape \" with a backslash"
+'single-quoted strings support interpolation'
+"""this is a
+   "long"
+   multiline string"""
+
+;; The prefix dot operator creates a string as well, but only if the string
+;; represents a valid variable name:
+
+.hello == "hello"
+
+;; If there are dashes in a dot-string, it is converted to camelCase:
+
+.hello-world == "helloWorld"
+
+;; This means that if you write a method call with dashes, for instance
+;; `document.get-element-by-id("some-id")`, it will compile to
+;; `document.getElementByID("some-id")`.  You have the choice of either
+;; notation.
+
+;; ##Interpolated Strings
+;; Single quotes are Interpolated
+
+n = 3
+print 'there are {n} little piggies'
+;; => there are 3 little piggies
