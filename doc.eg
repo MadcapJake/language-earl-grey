@@ -43,5 +43,32 @@ a + b + c
 
 ;; Variables can be declared as mutable or immutable:
 
-var x = 123  ;; mutable variable
+var x = 123 ;; mutable variable
 let y = "hello" ;; const variable (immutable)
+
+;; Hyphens are allowed inside variable names. This is valid:
+
+var my-variable = 1234
+
+;; Scoping is lexical: variables declared in a block are only valid in that
+;; block.  If you simply write:
+
+x = {1, 2, 3}
+
+;; Then what happens depends on whether a variable called `x` already exists in
+;; scope.
+
+;; * It _exists_ and is _mutable_: the variable is modified
+;; * It _exists_ and is _mutable_: compile time error
+;; * It _does not exist_: it is declared in the current block as *immutable*
+
+;; This means that most of the time you can declare variables without the `let`
+;; keyword, assuming they don't already exist.  You only need `let` if you are
+;; shadowing an existing variable. I recommend only using `var` if absolutely
+;; necessary--if you follow that advice it is basically impossible to make
+;; scoping errors.
+
+;; Note that the `var` and `let` keywords can be used inside patterns. For
+;; instance:
+
+{var {x, y}, let z} = {{1, 2}, 3}  ;; x and y are mutable; z isn't
