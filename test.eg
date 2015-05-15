@@ -25,7 +25,7 @@ x + nokey: y
 x mod nokey: y
 x = key: y ;; comments work after keywords!
 x each key: y
-x each* k ;; `x` should not be highlighted
+x each* k ;;
 
 nokey mod: y ;; do not highlight nokey
 ;; because mod is an operator
