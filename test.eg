@@ -33,3 +33,16 @@ nokey mod: y ;; do not highlight nokey
 ;; Highlight all of these:
 await; break; chain; continue; else; expr-value
 match; return; yield
+
+;; Edge-case highlighting test
+key-word: xyz
+nokey - x: yz
+
+;; Some keywords may contain operators as a subpart. If your regexp
+;; uses \b to single out operators like each, is or in, you may
+;; fail to highlight these properly:
+beaches           ;; Do not highlight each inside the word beaches
+each-thing        ;; Do not highlight each
+sleep-in          ;; Do not highlight in
+before-each: xyz  ;; Highlight before-each as a keyword
+is-great: xyz     ;; Highlight is-great as a keyword
