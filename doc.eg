@@ -1,0 +1,47 @@
+;; This is the Earl Grey docs page turned into EG with comments for markup
+
+;; Basic Syntax
+
+;; Comments
+;; Comments must be prefixed with two semicolons until the end of the line.
+
+;; ;; This is a comment
+
+;; Blocks
+;; Indent groups statements in Earl Grey. Alternatively, you can use square
+;; brackets `[]`:
+
+hello
+   superb
+   world
+
+;; is equivalent to:
+
+hello[superb; world]
+
+;; It is recommended to use indent to denote blocks, so you will not use
+;; square brackets much in practice.  Just be aware that the expression `[a]`
+;; is equivalent to plain `a` and `[a, b, c]` os going to return `c` (commas
+;; and semi-colons are equivalent in EG).
+
+;; Save for indented blocks, *all* line breaks are semi-colons in Earl Grey.
+;; There is *no* implicit line continuation. This being said, you can break a
+;; statement over multiple lines by *prefixing* continuating lines with `\` :
+
+a
+\ + b
+\ + c
+
+;; is equivalent to:
+
+a + b + c
+
+;; Be aware that indent isn't going to work for this: replacing the backslashes
+;; with indent will yield `a[+ b; + c]`.
+
+;; Variables
+
+;; Variables can be declared as mutable or immutable:
+
+var x = 123  ;; mutable variable
+let y = "hello" ;; const variable (immutable)
