@@ -41,7 +41,7 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?:^\\s*|(?:each|where|with)\\*?\\s+|[;=%,]\\s+)([a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?!$)(?:\\s+|:)(?!(?:[+\\-*/%&=]|as|each|in|is|mod|not|of|or|when|where|with|and)[\\s:])'
+        'begin': '(?:^\\s*|(?:each|where|with)\\*?\\s+|[;=%,]\\s+)([a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?!$)(?:\\:|\\s+(?!(?:[+\\-*/%&=]|as|each\\*?|in|is|mod|not|of|or|when|where|with|and)[\\s:])'
         'beginCaptures':
           '1':
             'name': 'entity.name.function.keyword.earl-grey'
