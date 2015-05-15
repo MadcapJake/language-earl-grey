@@ -86,7 +86,7 @@
             'name': 'punctuation.definition.string.dot.earl-grey'
           '2':
             'name': 'string.dotted.earl-grey'
-        'end': '(?<=[a-zA-Z$_0-9-])(?:[a-zA-Z$_0-9])(?=[^a-zA-Z$_0-9-])'
+        'end': '(?<=[a-zA-Z$_0-9-])(?:[a-zA-Z$_0-9])(?=[^a-zA-Z$_0-9-]|[\\(\\{\\[])'
         'name': 'meta.string.dotted.earl-grey'
       }
       {
