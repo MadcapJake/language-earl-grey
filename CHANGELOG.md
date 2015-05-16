@@ -4,30 +4,33 @@ This project attempts to adhere to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-- Add changelog file to track changes better
+- changelog file to track changes better
+- arrow functions, some constants and `this` highlighting (thanks @davej )
+-
 
 ### Changed
-- Updated todo list with completed syntax
-- Updated structure of `README.md`
-- Removed repple feature and keybindings as that will need to be a separate
-  package
+- todo list updated with completed syntax
+- structure of `README.md` changed around a bit
+
+### Removed
+- repple feature and keybindings from todo list as that will need to be a separate package
 
 
 ## [0.4.9] - 2015-05-16
 ### Changed
-- Symbol rule was removed from keyword rule. Gotta find a better selector.  
-  Another option is not highlighting general symbols (this is probably more
-  natural)
+- Symbol rule was removed from keyword rule. Gotta find a better selector. Another option is not highlighting general symbols (this is probably more natural)
 
 ### Fixed
 - Interpolation looks pretty good now (minus keywords...)
 
 ## [0.4.8] - 2015-05-16
 ### Added
-- Pretty `re` file that might not be useful but has helped me work through the
-  keyword pattern matching
+- Pretty `re` file that might not be useful but has helped me work through the keyword pattern matching
 - More of the docs have been translated to straight EG, up to interpolation
 
 ### Changed
-- Interpolation now does not show keywords due to current difficulties getting
-  it to work
+- Interpolation now does not show keywords due to current difficulties getting it to work
+
+[unreleased]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.9...HEAD
+[0.4.9]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.8...v0.4.9
+[0.4.8]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.7...v0.4.8
