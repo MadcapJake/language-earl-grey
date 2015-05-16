@@ -4,6 +4,10 @@
 
 Adds syntax highlighting, snippets, and repple support to Earl Grey files in Atom.
 
+## Status
+
+Still not finished but starting to look good!
+
 ## Todo
 
 * Syntax Highlighting
@@ -44,12 +48,8 @@ Adds syntax highlighting, snippets, and repple support to Earl Grey files in Ato
       * postfix `=` inline notation
 
 * Snippets
-* Repple support
-* Useful bindings
-
-## Status
-
-Do not use!  Just beginning to work on this!
+* Autocomplete hooks
+* Folding hooks
 
 ## How can I help?
 
