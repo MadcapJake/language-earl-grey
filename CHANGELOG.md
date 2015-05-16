@@ -9,7 +9,7 @@ This project attempts to adhere to [Semantic Versioning](http://semver.org/).
 ## [0.4.10] - 2015-05-16
 ### Added
 - changelog file to track changes better
-- arrow functions, some constants and `this` highlighting (thanks @davej)
+- arrow functions, some constants and `this` highlighting (thanks @davej )
 
 ### Changed
 - todo list updated with completed syntax

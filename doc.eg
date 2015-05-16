@@ -121,3 +121,9 @@ globals:
 n = 3
 print 'there are {n} little piggies'
 ;; => there are 3 little piggies
+
+;; #Numbers
+
+123               ;; decimal
+16rDEADBEEF       ;; hex
+2r100101011.101   ;; binary
