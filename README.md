@@ -15,13 +15,13 @@ Still not finished but starting to look good!
   * ~~Numbers~~
     * ~~Decimal~~
     * ~~Radix~~
-  * Variables
+  * ~~Variables~~
     * ~~`let` keyword~~
     * ~~`var` keyword~~
     * variable names
     * ~~`where` keyword~~
     * ~~`globals` keyword~~
-  * Strings
+  * ~~Strings~~
     * ~~Double quoted strings~~
     * ~~Escapes~~
     * ~~single-quoted strings~~
