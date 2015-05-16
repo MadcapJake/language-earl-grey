@@ -149,9 +149,9 @@
               {
                 'include': '#string'
               }
-              {
-                'include': '#symbol'
-              }
+              # {
+              #   'include': '#symbol'
+              # }
               {
                 'include': '#number'
               }
