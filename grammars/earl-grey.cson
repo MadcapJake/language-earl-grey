@@ -144,10 +144,19 @@
             'name': 'source.earl-grey.embedded.source'
             'patterns': [
               {
-                'include': '$self'
+                'include': '#operator'
+              }
+              {
+                'include': '#string'
               }
               {
                 'include': '#symbol'
+              }
+              {
+                'include': '#number'
+              }
+              {
+                'include': '#method'
               }
             ]
           }
