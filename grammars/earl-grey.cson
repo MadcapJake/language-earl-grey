@@ -97,7 +97,7 @@
         'name': 'constant.numeric.decimal.earl-grey'
       }
       {
-        'match': '\\b(\\d[0-9_]*[rR]\\w*(?:\\.\\w+)?)'
+        'match': '\\b(\\d+[rR]\\w+(?:\\.[a-zA-Z0-9]+)?)\\b'
         'name': 'constant.numeric.radix.earl-grey'
       }
     ]
