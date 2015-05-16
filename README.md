@@ -12,16 +12,16 @@ Adds syntax highlighting, snippets, and repple support to Earl Grey files in Ato
     * ~~Decimal~~
     * ~~Radix~~
   * Variables
-    * `let` keyword
-    * `var` keyword
+    * ~~`let` keyword~~
+    * ~~`var` keyword~~
     * variable names
-    * `where` keyword
-    * `globals` keyword
+    * ~~`where` keyword~~
+    * ~~`globals` keyword~~
   * Strings
     * ~~Double quoted strings~~
-    * Escapes
+    * ~~Escapes~~
     * ~~single-quoted strings~~
-    * single-quoted string interpolation
+    * ~~single-quoted string interpolation~~ *(no keywords though)*
     * ~~prefix dot strings~~
   * Arrays/Objects
     * array notation
