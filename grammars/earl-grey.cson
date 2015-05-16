@@ -22,6 +22,30 @@
     ]
   }
   {
+    'match': '->'
+    'name': 'storage.type.function.earl-grey'
+  }
+  {
+    'match': '\\b(?<!\\.)(true)(?!\\s*[:=][^=])\\b'
+    'name': 'constant.language.boolean.true.earl-grey'
+  }
+  {
+    'match': '\\b(?<!\\.)(false)(?!\\s*[:=][^=])\\b'
+    'name': 'constant.language.boolean.false.earl-grey'
+  }
+  {
+    'match': '\\b(?<!\\.)(undefined)(?!\\s*[:=][^=])\\b'
+    'name': 'constant.language.undefined.earl-grey'
+  }
+  {
+    'match': '\\b(?<!\\.)(null)(?!\\s*[:=][^=])\\b'
+    'name': 'constant.language.null.earl-grey'
+  }
+  {
+    'match': '\\b(?<!\\.)(this)(?!\\s*[:=][^=])\\b'
+    'name': 'variable.language.this.earl-grey'
+  }
+  {
     'include': '#operator'
   }
   {
