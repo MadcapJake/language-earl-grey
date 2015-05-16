@@ -122,8 +122,24 @@ n = 3
 print 'there are {n} little piggies'
 ;; => there are 3 little piggies
 
-;; #Numbers
+;; ##Numbers
 
 123               ;; decimal
 16rDEADBEEF       ;; hex
 2r100101011.101   ;; binary
+
+;; ##Arrays and Objects
+;; Both arrays and object literals are defined with curly braces:
+
+{1, 2, 3}              ;; an array
+{a = 1, b = 2}         ;; an object
+{"a" => 1, "b" => 2}   ;; the same object
+
+;; You can also "mix" the notations:
+
+{1, 2, a = 3, "b" = 4} ;; an array with fields named a and b
+
+;; Empty data structures are denoted as follows:
+
+empty-array = {}
+empty-object = {=}
