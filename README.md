@@ -46,7 +46,6 @@ Still not finished but starting to look good!
       * postfix `=` and block notation
       * postfix `=` and arrow notation
       * postfix `=` inline notation
-
 * Snippets
 * Autocomplete hooks
 * Folding hooks
