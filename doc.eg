@@ -159,3 +159,17 @@ empty-object = {=}
 
 ;; There are several different, but equivalent notations to call
 ;; functions:
+
+func(arg1, arg2)            ;; the usual notation
+func{arg1, arg2}            ;; curly bracket notation
+func(arg1) with arg2        ;; with-notation
+func(___, arg2) with arg1   ;; with-notation (using placeholder)
+func with arg               ;; with-notation (single argument)
+
+;; The with-notation can be used to increase readability. For instance:
+
+{1, 2, 3}.map(x -> x * x)
+{1, 2, 3}.map with x ->
+   x * x
+
+;; The gains are most visible when the body of the function is large.
