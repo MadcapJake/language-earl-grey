@@ -84,6 +84,30 @@
       }
     ]
   }
+  {
+    'comment': 'postcircumfix curlies function call'
+    'begin': '(?=[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?(?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*(?:\\s*\\{|\\s+with))'
+    'end': '(\\})'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.arguments.end.earl-grey'
+    'name': 'meta.function-call.curlies.earl-grey'
+    'patterns': [
+      {
+        'begin': '(\\{)'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.definition.arguments.begin.earl-grey'
+        'contentName': 'meta.function-call.arguments.earl-grey'
+        'end': '(?=\\})'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+    ]
+  }
 ]
 'repository':
   keyword:
