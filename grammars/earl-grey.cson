@@ -93,12 +93,12 @@
   number:
     'patterns': [
       {
-        'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
-        'name': 'constant.numeric.decimal.earl-grey'
-      }
-      {
         'match': '\\b(\\d+[rR]\\w+(?:\\.[a-zA-Z0-9]+)?)\\b'
         'name': 'constant.numeric.radix.earl-grey'
+      }
+      {
+        'match': '\\b(?i:(\\d[0-9_]*(?:\\.[0-9_]+)?(?:e[\\+\\-]?[0-9_]+)?))'
+        'name': 'constant.numeric.decimal.earl-grey'
       }
     ]
   string:
