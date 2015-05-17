@@ -4,7 +4,7 @@
 (?:
     (?<={)\s*|
     ^\s*|
-    (?:each|where|with)\*?\s+|
+    (?<=each|each*|where|with)\s+|
     [;=%,]\s+
 )
 
@@ -16,17 +16,20 @@
 
 (?# Keyword postfix restrictions )
 (?:\:|
-   \s+(?!(?:[+\-*/%&=]|
-         as|
-         each\*?|
-         in|
-         is|
-         mod|
-         not|
-         of|
-         or|
-         when|
-         where|
-         with|
-         and)[\s:])
+   \s+(?!(?:
+          [+\-*/%&=]|
+          as|
+          each\*?|
+          in|
+          is|
+          mod|
+          not|
+          of|
+          or|
+          when|
+          where|
+          with|
+          and
+         )[\s:]
+      )
 )
