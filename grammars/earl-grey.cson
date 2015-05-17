@@ -73,7 +73,7 @@
         'begin': '(\\{)'
         'beginCaptures':
           '1':
-            'name': 'punctuation.definition.arguments.begin.earl-grey'
+            'name': 'punctuation.definition.arguments.curly.begin.earl-grey'
         'contentName': 'meta.function-call.curly.arguments.earl-grey'
         'end': '(?=\\})'
         'patterns': [
@@ -91,7 +91,7 @@
     'endCaptures':
       '1':
         'name': 'punctuation.definition.arguments.paren.end.earl-grey'
-    'name': 'meta.function-call.parens.earl-grey'
+    'name': 'meta.function-call.paren.earl-grey'
     'patterns': [
       {
         'begin': '(\\()'
