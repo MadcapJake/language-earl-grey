@@ -1,15 +1,19 @@
-;; This is the Earl Grey docs page turned into EG with comments for markup
+;; This is the Earl Grey docs page turned into EG with comments for
+;; markup
 
-;; #Basic Syntax
+;; ============
+;; BASIC SYNTAX
+;; ============
 
-;; ##Comments
-;; Comments must be prefixed with two semicolons until the end of the line.
+;; === Comments ===
+;; Comments must be prefixed with two semicolons until the end of the
+;; line.
 
 ;; ;; This is a comment
 
-;; ##Blocks
-;; Indent groups statements in Earl Grey. Alternatively, you can use square
-;; brackets `[]`:
+;; === Blocks ===
+;; Indent groups statements in Earl Grey. Alternatively, you can use
+;; square brackets `[]`:
 
 hello
    superb
@@ -20,13 +24,14 @@ hello
 hello[superb; world]
 
 ;; It is recommended to use indent to denote blocks, so you will not use
-;; square brackets much in practice.  Just be aware that the expression `[a]`
-;; is equivalent to plain `a` and `[a, b, c]` os going to return `c` (commas
-;; and semi-colons are equivalent in EG).
+;; square brackets much in practice.  Just be aware that the expression
+;; `[a]` is equivalent to plain `a` and `[a, b, c]` os going to return
+;; `c` (commas and semi-colons are equivalent in EG).
 
-;; Save for indented blocks, *all* line breaks are semi-colons in Earl Grey.
-;; There is *no* implicit line continuation. This being said, you can break a
-;; statement over multiple lines by *prefixing* continuating lines with `\` :
+;; Save for indented blocks, *all* line breaks are semi-colons in Earl
+;; Grey. There is *no* implicit line continuation. This being said, you
+;; can break a statement over multiple lines by *prefixing* continuating
+;; lines with `\` :
 
 a
 \ + b
@@ -36,10 +41,12 @@ a
 
 a + b + c
 
-;; Be aware that indent isn't going to work for this: replacing the backslashes
-;; with indent will yield `a[+ b; + c]`.
+;; Be aware that indent isn't going to work for this: replacing the
+;; backslashes with indent will yield `a[+ b; + c]`.
 
-;; ##Variables
+;; =========
+;; VARIABLES
+;; =========
 
 ;; Variables can be declared as mutable or immutable:
 
@@ -50,31 +57,31 @@ let y = "hello" ;; const variable (immutable)
 
 var my-variable = 1234
 
-;; Scoping is lexical: variables declared in a block are only valid in that
-;; block.  If you simply write:
+;; Scoping is lexical: variables declared in a block are only valid in
+;; that block. If you simply write:
 
 x = {1, 2, 3}
 
-;; Then what happens depends on whether a variable called `x` already exists in
-;; scope.
+;; Then what happens depends on whether a variable called `x` already
+;; exists in scope.
 
 ;; * It _exists_ and is _mutable_: the variable is modified
 ;; * It _exists_ and is _mutable_: compile time error
-;; * It _does not exist_: it is declared in the current block as *immutable*
+;; * It _doesn't exist_: it's declared in current block as *immutable*
 
-;; This means that most of the time you can declare variables without the `let`
-;; keyword, assuming they don't already exist.  You only need `let` if you are
-;; shadowing an existing variable. I recommend only using `var` if absolutely
-;; necessary--if you follow that advice it is basically impossible to make
-;; scoping errors.
+;; This means that most of the time you can declare variables without
+;; the `let` keyword, assuming they don't already exist.  You only need
+;; `let` if you are shadowing an existing variable. I recommend only
+;; using `var` if absolutely necessary--if you follow that advice it is
+;; basically impossible to make scoping errors.
 
-;; Note that the `var` and `let` keywords can be used inside patterns. For
-;; instance:
+;; Note that the `var` and `let` keywords can be used inside patterns.
+;; For instance:
 
 {var {x, y}, let z} = {{1, 2}, 3}  ;; x and y are mutable; z isn't
 
-;; The _where_ statement is another alternative to declare variables local to
-;; single expression.  Here's a funny example:
+;; The _where_ statement is another alternative to declare variables
+;; local to single expression.  Here's a funny example:
 
 x + y where
    x = 100
@@ -83,15 +90,17 @@ x + y where
 
 ;; Yes, you can do that
 
-;; ##Global variables
+;; === Global variables ===
 ;; Global variables need to be declared to be accessible:
 
 globals:
    document, google, React
 
-;; #Literals and Data Structurs
+;; ============================
+;; LITERALS AND DATA STRUCTURES
+;; ============================
 
-;; ##Strings
+;; === Strings ===
 ;; Use double quotes:
 
 "this is a string"
@@ -101,8 +110,8 @@ globals:
    "long"
    multiline string"""
 
-;; The prefix dot operator creates a string as well, but only if the string
-;; represents a valid variable name:
+;; The prefix dot operator creates a string as well, but only if the
+;; string represents a valid variable name:
 
 .hello == "hello"
 
@@ -115,20 +124,20 @@ globals:
 ;; `document.getElementByID("some-id")`.  You have the choice of either
 ;; notation.
 
-;; ##Interpolated Strings
+;; === Interpolated Strings ===
 ;; Single quotes are Interpolated
 
 n = 3
 print 'there are {n} little piggies'
 ;; => there are 3 little piggies
 
-;; ##Numbers
+;; === Numbers ===
 
 123               ;; decimal
 16rDEADBEEF       ;; hex
 2r100101011.101   ;; binary
 
-;; ##Arrays and Objects
+;; === Arrays and Objects ===
 ;; Both arrays and object literals are defined with curly braces:
 
 {1, 2, 3}              ;; an array
@@ -143,3 +152,10 @@ print 'there are {n} little piggies'
 
 empty-array = {}
 empty-object = {=}
+
+;; =========
+;; FUNCTIONS
+;; =========
+
+;; There are several different, but equivalent notations to call
+;; functions:
