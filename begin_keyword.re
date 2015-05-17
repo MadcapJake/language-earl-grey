@@ -3,7 +3,7 @@
 (?# Keyword prefix restrictions group )
 (?:
     (?<=^|{)\s*|
-    (?<=[;=%,]|each|each*|where|with)\s+
+    (?<=[;=%,]|each|each\*|where|with)\s+
 )
 
 (?# Keyword symbol group )
