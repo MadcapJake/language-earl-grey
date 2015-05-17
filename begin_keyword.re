@@ -2,10 +2,8 @@
 
 (?# Keyword prefix restrictions group )
 (?:
-    (?<={)\s*|
-    ^\s*|
-    (?<=each|each*|where|with)\s+|
-    [;=%,]\s+
+    (?<=^|{)\s*|
+    (?<=[;=%,]|each|each*|where|with)\s+
 )
 
 (?# Keyword symbol group )
