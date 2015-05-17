@@ -70,19 +70,17 @@
     'name': 'meta.function-call.parens.earl-grey'
     'patterns': [
       {
-        {
-          'begin': '(\\()'
-          'beginCaptures':
-            '1':
-              'name': 'punctuation.definition.arguments.begin.earl-grey'
-          'contentName': 'meta.function-call.arguments.earl-grey'
-          'end': '(?=\\))'
-          'patterns': [
-            {
-              'include': '$self'
-            }
-          ]
-        }
+        'begin': '(\\()'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.definition.arguments.begin.earl-grey'
+        'contentName': 'meta.function-call.arguments.earl-grey'
+        'end': '(?=\\))'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
       }
     ]
   }
