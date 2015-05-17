@@ -66,7 +66,7 @@
     'end': '(\\})'
     'endCaptures':
       '1':
-        'name': 'punctuation.definition.arguments.end.earl-grey'
+        'name': 'punctuation.definition.arguments.curly.end.earl-grey'
     'name': 'meta.function-call.curly.earl-grey'
     'patterns': [
       {
@@ -74,7 +74,7 @@
         'beginCaptures':
           '1':
             'name': 'punctuation.definition.arguments.begin.earl-grey'
-        'contentName': 'meta.function-call.arguments.earl-grey'
+        'contentName': 'meta.function-call.curly.arguments.earl-grey'
         'end': '(?=\\})'
         'patterns': [
           {
@@ -90,15 +90,15 @@
     'end': '(\\))'
     'endCaptures':
       '1':
-        'name': 'punctuation.definition.arguments.end.earl-grey'
+        'name': 'punctuation.definition.arguments.paren.end.earl-grey'
     'name': 'meta.function-call.parens.earl-grey'
     'patterns': [
       {
         'begin': '(\\()'
         'beginCaptures':
           '1':
-            'name': 'punctuation.definition.arguments.begin.earl-grey'
-        'contentName': 'meta.function-call.arguments.earl-grey'
+            'name': 'punctuation.definition.arguments.paren.begin.earl-grey'
+        'contentName': 'meta.function-call.paren.arguments.earl-grey'
         'end': '(?=\\))'
         'patterns': [
           {
