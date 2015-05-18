@@ -121,7 +121,7 @@
         )
         # 1: KEYWORD
         (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
-        ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
+        (?<keyword>[a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
         \\ +
         (?=
           # 2: PREFIX OP
@@ -144,7 +144,7 @@
           [\\(\\{\\[]
         )'
         'beginCaptures':
-          '1':
+          'keyword':
             'name': 'entity.name.function.keyword.earl-grey'
         'end': '(?=[;$\\n])'
         'name': 'meta.symbol.macro.earl-grey'
