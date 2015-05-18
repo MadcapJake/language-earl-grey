@@ -122,7 +122,7 @@
         # 1: KEYWORD
         (?!as|each|in|is|mod|not|of|or|when|where|with|and)
         ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
-        \\s+
+        \\ +
         (?=
           # 2: PREFIX OP
           [+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]
