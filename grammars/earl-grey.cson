@@ -116,8 +116,8 @@
         'begin': '(?x)
         (?:
           (?:^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)|
-          (?:[=%]|each|each\\*|where|with)\\s+|
-          (?<=\\S)\\s+[+\\-*/~^<>=%&|?!#]+\\s+
+          (?:=|%|each|each\\*|where|with)\\s+|
+          \\S\\s+[+\\-*/~^<>=%&|?!#]+\\s+
         )
         # 1: KEYWORD
         # (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
