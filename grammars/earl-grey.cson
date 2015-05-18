@@ -120,7 +120,7 @@
           \\S\\s+[+\\-*/~^<>=%&|?!#]+\\s+
         )
         # 1: KEYWORD
-        # (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
+        (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
         ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
         \\ +
         (?=
@@ -128,7 +128,7 @@
           [+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]
           |
           # 3: SYMBOL
-          # (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
+          (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
           @?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?
           |
           # 4: DOTSTRING
