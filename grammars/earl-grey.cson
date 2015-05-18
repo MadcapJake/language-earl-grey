@@ -113,7 +113,7 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?:(?:^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)|(?:[=%]|each|each\\*|where|with)\\s+|(?<=\\S)\\s+[+\\-*/~^<>=%&|?!#]+\\s+)([a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)(?<!as|each|in|is|mod|not|of|or|when|where|with|and)\\s+(?:[+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]|(?<!\\n)@?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?(?<!and|as|each|in|is|mod|not|of|or|when|where|with)|\\..*?(?=[\\s;,])|(?:\\"{3}|[\\"\\\']).*(?:\\"{3}|[\\"\\\'])|\\d(?:[\\.\\w]*\\d)?|[\\(\\{\\[])'
+        'begin': '(?:(?:^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)|(?:[=%]|each|each\\*|where|with)\\s+|(?<=\\S)\\s+[+\\-*/~^<>=%&|?!#]+\\s+)([a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)(?<!as|each|in|is|mod|not|of|or|when|where|with|and)\\s+(?:[+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]|(?<!\\n)@?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?(?<!and|as|each|in|is|mod|not|of|or|when|where|with)|\\..*?(?=[\\s;,])|(?:\\"{3}|[\\"\\\\\']).*(?:\\"{3}|[\\"\\\\\'])|\\d(?:[\\.\\w]*\\d)?|[\\(\\{\\[])'
         'beginCaptures':
           '1':
             'name': 'entity.name.function.keyword.earl-grey'
