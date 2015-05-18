@@ -114,12 +114,14 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?<__kw>^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)(?<kw>[a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)(?<kw__>(?=[+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]|(?=@?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)|)(?=\\..*?(?=[\\s;,]))|(?=(?:\\"{3}|[\\"\\\\\']).*(?:\\"{3}|[\\"\\\\\']))|(?=\\d(?:[\\.\\w]*\\d)?))'
+        'begin': '(^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)((?=[+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]|(?=@?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)|)(?=\\..*?(?=[\\s;,]))|(?=(?:\\"{3}|[\\"\\\\\']).*(?:\\"{3}|[\\"\\\\\']))|(?=\\d(?:[\\.\\w]*\\d)?))'
         'beginCaptures':
-          '__kw':
+          '1':
             'name': 'illegal.invalid.debug.earl-grey'
-          'kw':
+          '2':
             'name': 'entity.name.function.keyword.earl-grey'
+          '3':
+            'name': 'illegal.deprecated.debug.earl-grey'
         'end': '(?=[;$\\n])'
         'name': 'meta.symbol.macro.earl-grey'
         'patterns': [
