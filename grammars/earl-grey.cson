@@ -113,7 +113,7 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?x)(?<debug>
+        'begin': '(?x)(?<prefix>
           (?:^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)|
           (?:=|%|each|each\\*|where|with)\\s+|
           \\S\\s+[+\\-*/~^<>=%&|?!#]+\\s+
@@ -121,7 +121,7 @@
         (?# 1: KEYWORD )
         (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
         (?<keyword>[a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
-        \\ +
+        \\s+
         (?=
           (?# 2: PREFIX OP )
           [+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]
@@ -131,7 +131,7 @@
           @?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?
           |
           (?# 4: DOTSTRING )
-          \\..*?(?=[\\ \\t;,])
+          \\..*?(?=[\\s;,])
           |
           (?# 5: STRING )
           (?:\\"{3}|[\\"\\\\\']).*(?:\\"{3}|[\\"\\\\\'])
