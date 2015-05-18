@@ -114,7 +114,7 @@
     'patterns': [
       {
         'begin': '(?x)
-        (?:
+        (?<=
           (?:^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)|
           (?:[=%]|each|each\\*|where|with)\\s+|
           (?<=\\S)\\s+[+\\-*/~^<>=%&|?!#]+\\s+
@@ -123,7 +123,7 @@
         ([a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
         (?<!as|each|in|is|mod|not|of|or|when|where|with|and)
         \\s+
-        (?:
+        (?=
           # 2: PREFIX OP
           [+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]
           |
