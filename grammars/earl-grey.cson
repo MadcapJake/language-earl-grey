@@ -58,9 +58,6 @@
     'include': '#method'
   }
   {
-    'include': '#keyword'
-  }
-  {
     'comment': 'postcircumfix curly function call'
     'begin': '(?=[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?(?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*\\s*\\{)'
     'end': '(\\})'
@@ -107,6 +104,9 @@
         ]
       }
     ]
+  }
+  {
+    'include': '#keyword'
   }
 ]
 'repository':
