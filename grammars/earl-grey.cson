@@ -114,7 +114,7 @@
     'patterns': [
       {
         'begin': '(?x)
-        (?:
+        (?<debug>
           (?:^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)|
           (?:=|%|each|each\\*|where|with)\\s+|
           \\S\\s+[+\\-*/~^<>=%&|?!#]+\\s+
@@ -144,6 +144,8 @@
           [\\(\\{\\[]
         )'
         'beginCaptures':
+          'debug':
+            'name': 'invalid.illegal.debug.earl-grey'
           'keyword':
             'name': 'entity.name.function.keyword.earl-grey'
         'end': '(?=[;$\\n])'
