@@ -114,21 +114,33 @@
     'patterns': [
       {
         'begin': '(?x)
-        (?<=
+        (?:
           (?:^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)|
           (?:[=%]|each|each\\*|where|with)\\s+|
           (?<=\\S)\\s+[+\\-*/~^<>=%&|?!#]+\\s+
         )
+        # 1: KEYWORD
         ([a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
         (?<!as|each|in|is|mod|not|of|or|when|where|with|and)
         \\s+
-        (?=
-          \\s[+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]|
-          @?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?
-          (?<!and|as|each|in|is|mod|not|of|or|when|where|with)|
-          \\..*?(?=[\\s;,])|
-          (?:\\"{3}|[\\"\\\\\']).*(?:\\"{3}|[\\"\\\\\'])|
-          \\d(?:[\\.\\w]*\\d)?|
+        (?:
+          # 2: PREFIX OP
+          [+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_]
+          |
+          # 3: SYMBOL
+          (?<!\\n)@?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?
+          (?<!and|as|each|in|is|mod|not|of|or|when|where|with)
+          |
+          # 4: DOTSTRING
+          \\..*?(?=[\\s;,])
+          |
+          # 5: STRING
+          (?:\\"{3}|[\\"\\\']).*(?:\\"{3}|[\\"\\\'])
+          |
+          # 6: NUMBER
+          \\d(?:[\\.\\w]*\\d)?
+          |
+          # 7: BRACKET
           [\\(\\{\\[]
         )'
         'beginCaptures':
