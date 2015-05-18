@@ -115,9 +115,9 @@
       {
         'begin': '(?x)
         (?:
-          (?:^[\\ \\t]*|[;,{][\\ \\t]*|[a-zA-Z$0-9_][\\ \\t]+)|
-          (?:[=%]|each|each\\*|where|with)[\\ \\t]+|
-          (?<=\\S)[\\ \\t]+[+\\-*/~^<>=%&|?!#]+[\\ \\t]+
+          (?:^\\s*|[;,{]\\s*|[a-zA-Z$0-9_]\\s+)|
+          (?:[=%]|each|each\\*|where|with)\\s+|
+          (?<=\\S)\\s+[+\\-*/~^<>=%&|?!#]+\\s+
         )
         # 1: KEYWORD
         # (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
