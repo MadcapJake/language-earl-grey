@@ -146,7 +146,7 @@
         'beginCaptures':
           '1':
             'name': 'entity.name.function.keyword.earl-grey'
-        'end': '(?=[;$\\n\\r\\f])'
+        'end': '(?=[;$\\n])'
         'name': 'meta.symbol.macro.earl-grey'
         'patterns': [
           {
