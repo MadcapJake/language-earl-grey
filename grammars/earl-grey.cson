@@ -116,12 +116,12 @@
       {
         'begin': '(?x)(?>
           (?:^\\s*)|
+          (?:=|%|each|each\\*|where|with)\\s+|
           (?:
-            (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
+            (?!(?:and|as|in|is|mod|not|of|or|when)\\s)
             ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)\\s+
           )|
           (?:^\\s*|[;,{]\\s*)|
-          (?:=|%|each|each\\*|where|with)\\s+|
           \\S\\s+[+\\-*/~^<>=%&|?!#]+\\s+
         )
         (?# 1: KEYWORD )
