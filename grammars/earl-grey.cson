@@ -114,7 +114,7 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?x)(
+        'begin': '(?x)(?>
           (?:^\\s*|[;,{]\\s*)|
           (?:=|%|each|each\\*|where|with)\\s+|
           \\S\\s+[+\\-*/~^<>=%&|?!#]+\\s+|
