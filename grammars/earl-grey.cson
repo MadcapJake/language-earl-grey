@@ -145,7 +145,7 @@
         'name': 'meta.symbol.macro.earl-grey'
         'patterns': [
           {
-            'include': '#inner_keyword'
+            'include': '#keyword'
           }
           {
             'include': '#operator'
