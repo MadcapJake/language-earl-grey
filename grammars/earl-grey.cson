@@ -145,11 +145,11 @@
           # (?=[\\(\\{\\[])
         'beginCaptures':
           '1':
-            'name': 'meta.macro.prefix.earl-grey'
+            'name': 'invalid.illegal.prefix.earl-grey'
           '2':
             'name': 'entity.name.function.keyword.earl-grey'
           '3':
-            'name': 'meta.macro.postfix.earl-grey'
+            'name': 'invalid.illegal.postfix.earl-grey'
         'end': '(?=[;$\\n])'
         'name': 'meta.symbol.macro.earl-grey'
         'patterns': [
@@ -198,11 +198,11 @@
           )'
         'beginCaptures':
           '1':
-            'name': 'meta.macro.prefix.inner.earl-grey'
+            'name': 'invalid.illegal.prefix.inner.earl-grey'
           '2':
             'name': 'entity.name.function.keyword.earl-grey'
           '3':
-            'name': 'meta.macro.postfix.inner.earl-grey'
+            'name': 'invalid.illegal.postfix.inner.earl-grey'
         'end': '(?=[;$\\n])'
         'name': 'meta.symbol.macro.inner.earl-grey'
         'patterns': [
