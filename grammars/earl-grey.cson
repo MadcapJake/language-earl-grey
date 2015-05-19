@@ -114,12 +114,8 @@
   keyword:
     'patterns': [
       {
-        'begin': '(?x)(?:
-          (?:^\\s*)|
-          (?:=|%|each|each\\*|where|with)\\s+|
-          (?:^\\s*|[;,{]\\s*)|
-          \\S\\s+[+\\-*/~^<>=%&|?!#]+\\s+
-        )
+        'begin': '(?x)
+        [^\\w\\$]
         (?# 1: KEYWORD )
         (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
         ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
@@ -152,59 +148,6 @@
             'name': 'invalid.illegal.postfix.earl-grey'
         'end': '(?=$\\n?|[;,])'
         'name': 'meta.symbol.macro.earl-grey'
-        'patterns': [
-          {
-            'include': '#inner_keyword'
-          }
-          {
-            'include': '#operator'
-          }
-          {
-            'include': '#string'
-          }
-          {
-            'include': '#number'
-          }
-          {
-            'include': '#method'
-          }
-        ]
-      }
-    ]
-  inner_keyword:
-    'patterns': [
-      {
-        # (?<!\\sand|\\sas|\\sin|\\sis|\\smod|\\snot|\\sof|\\sor|\\swhen)
-        'begin': '(?x)
-          (?<=\\w)(\\s+)
-          (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
-          ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)\\s+
-          (
-            (?# 2: PREFIX OP )
-            (?=[+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_])
-            |
-            (?# 3: SYMBOL )
-            (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with):?\\s)
-            (?=@?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
-            |
-            (?# 4: DOTSTRING )
-            (?=\\..*?(?=[\\s;,]))
-            |
-            (?# 5: STRING )
-            (?=(?:\\"{3}|[\\"\\\\\']).*(?:\\"{3}|[\\"\\\\\']))
-            |
-            (?# 6: NUMBER )
-            (?=\\d(?:[\\.\\w]*\\d)?)
-          )'
-        'beginCaptures':
-          '1':
-            'name': 'invalid.illegal.prefix.inner.earl-grey'
-          '2':
-            'name': 'entity.name.function.keyword.earl-grey'
-          '3':
-            'name': 'invalid.illegal.postfix.inner.earl-grey'
-        'end': '(?=$\\n?|[;,])'
-        'name': 'meta.symbol.macro.inner.earl-grey'
         'patterns': [
           {
             'include': '#inner_keyword'
