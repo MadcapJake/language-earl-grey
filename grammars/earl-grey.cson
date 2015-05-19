@@ -142,7 +142,7 @@
           '2':
             'name': 'invalid.illegal.postfix.earl-grey'
         'end': '(?=$\\n?|[;,])'
-        'name': 'meta.symbol.macro.earl-grey'
+        'name': 'meta.symbol.macro.control.open.earl-grey'
         'patterns': [
           {
             'include': '#keyword'
