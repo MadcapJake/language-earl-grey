@@ -161,6 +161,59 @@
           }
         ]
       }
+      {
+        'begin': '(?x)
+        (?:
+          ^|
+          \\s(?:=|=>|->|%|with|where|each|each\\*|where|with)\\s+|
+          \\S+(?<![+\\-*/~^<>%&|?!@#.])\\s+
+        )
+        (?# 1: KEYWORD )
+        (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
+        ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
+        (\\:)\\s+
+        (?:
+          (?# 2: PREFIX OP )
+          (?=[+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_])
+          |
+          (?# 3: SYMBOL )
+          (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with):?\\s)
+          (?=@?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
+          |
+          (?# 4: DOTSTRING )
+          (?=\\..*?(?=[\\s;,]))
+          |
+          (?# 5: STRING )
+          (?=(?:\\"{3}|[\\"\\\\\']).*(?:\\"{3}|[\\"\\\\\']))
+          |
+          (?# 6: NUMBER )
+          (?=\\d(?:[\\.\\w]*\\d)?)
+        )'
+        'beginCaptures':
+          '1':
+            'name': 'entity.name.function.keyword.earl-grey'
+          '2':
+            'name': 'punctuation.section.control.delimiter.earl-grey'
+        'end': '(?=$\\n?|[;,])'
+        'name': 'meta.symbol.macro.control.colon.earl-grey'
+        'patterns': [
+          {
+            'include': '#keyword'
+          }
+          {
+            'include': '#operator'
+          }
+          {
+            'include': '#string'
+          }
+          {
+            'include': '#number'
+          }
+          {
+            'include': '#method'
+          }
+        ]
+      }
     ]
   number:
     'patterns': [
