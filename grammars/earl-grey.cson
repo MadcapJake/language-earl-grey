@@ -175,11 +175,10 @@
     'patterns': [
       {
         'begin': '(?x)
-          (?!(?:and|as|in|is|mod|not|of|or|when)\\s)
-          ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)\\s+
+          (?<!and|as|in|is|mod|not|of|or|when)
+          (?<=\\w)(\\s+)
           (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
-          ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
-          \\s+
+          ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)\\s+
           (
             (?# 2: PREFIX OP )
             (?=[+\\-*/~^<>=%&|?!#][a-zA-Z$0-9_])
