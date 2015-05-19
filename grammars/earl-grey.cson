@@ -150,7 +150,7 @@
             'name': 'entity.name.function.keyword.earl-grey'
           '2':
             'name': 'invalid.illegal.postfix.earl-grey'
-        'end': '(?=[;$\\n])'
+        'end': '(?=$\\n?|[;,])'
         'name': 'meta.symbol.macro.earl-grey'
         'patterns': [
           {
@@ -203,7 +203,7 @@
             'name': 'entity.name.function.keyword.earl-grey'
           '3':
             'name': 'invalid.illegal.postfix.inner.earl-grey'
-        'end': '(?=[;$\\n])'
+        'end': '(?=$\\n?|[;,])'
         'name': 'meta.symbol.macro.inner.earl-grey'
         'patterns': [
           {
