@@ -144,10 +144,10 @@
           |
           (?# 6: NUMBER )
           (?=\\d(?:[\\.\\w]*\\d)?)
-          |
-          (?# 7: BRACKET )
-          (?=[\\(\\{\\[])
         )'
+        # |
+        #   (?# 7: BRACKET )
+        #   (?=[\\(\\{\\[])
         'beginCaptures':
           '1':
             'name': 'invalid.illegal.macro.prefix.earl-grey'
