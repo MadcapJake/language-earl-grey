@@ -109,7 +109,6 @@
     'include': '#keyword'
   }
 ]
-# (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
 'repository':
   keyword:
     'patterns': [
@@ -137,11 +136,7 @@
           (?# 6: NUMBER )
           (?=\\d(?:[\\.\\w]*\\d)?)
         )'
-          # (?# 7: BRACKET )
-          # (?=[\\(\\{\\[])
         'beginCaptures':
-          # '1':
-          #   'name': 'invalid.illegal.prefix.earl-grey'
           '1':
             'name': 'entity.name.function.keyword.earl-grey'
           '2':
