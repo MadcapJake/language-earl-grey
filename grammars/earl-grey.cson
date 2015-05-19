@@ -145,11 +145,11 @@
         )'
         'beginCaptures':
           '1':
-            'name': 'meta.debug.macro.prefix.earl-grey'
+            'name': 'invalid.illegal.macro.prefix.earl-grey'
           '2':
             'name': 'entity.name.function.keyword.earl-grey'
           '3':
-            'name': 'meta.debug.macro.postfix.earl-grey'
+            'name': 'invalid.illegal.macro.postfix.earl-grey'
         'end': '(?=[;$\\n])'
         'name': 'meta.symbol.macro.earl-grey'
         'patterns': [
