@@ -149,7 +149,7 @@
           '2':
             'name': 'entity.name.function.keyword.earl-grey'
           '3':
-            'name': 'meta.debug.macro.postfix.earl-grey'
+            'name': 'illegal.invalid.macro.postfix.earl-grey'
         'end': '(?=[;$\\n])'
         'name': 'meta.symbol.macro.earl-grey'
         'patterns': [
