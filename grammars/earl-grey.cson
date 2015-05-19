@@ -115,7 +115,7 @@
     'patterns': [
       {
         'begin': '(?x)
-        (?:^|[^\\w\\$])
+        (?<=^|[^\\w\\$])
         (?# 1: KEYWORD )
         (?!(?:and|as|each\\*|each|in|is|mod|not|of|or|when|where|with)\\s)
         ([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)
