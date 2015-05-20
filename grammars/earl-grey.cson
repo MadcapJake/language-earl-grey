@@ -55,7 +55,8 @@
     'include': '#string'
   }
   {
-    'begin': '(#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\{'
+    'comment': 'special named tuple construct'
+    'begin': '(\\#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\{'
     'beginCaptures':
       '1':
         'name': 'storage.language.named-tuple.earl-grey'
