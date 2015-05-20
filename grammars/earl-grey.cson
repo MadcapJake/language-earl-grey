@@ -294,7 +294,7 @@
   method:
     'patterns': [
       {
-        'match': '(?<=^|\\s)(@[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\b'
+        'match': '(@[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\b'
         'name': 'entity.other.attribute-name.method.earl-grey'
       }
     ]
