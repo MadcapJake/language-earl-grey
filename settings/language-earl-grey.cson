@@ -3,7 +3,12 @@
     'autoIndentOnPaste': true
     'tabLength': 3
     'commentStart': ';;'
-    'increaseIndentPattern': '^\\s*((catch|class|elif|else|except|finally|for|
-    if|inline-macro|macro|match|provide|require|require-macros|try|unless|with|
-    while)\\b.*:\\s*$|^\\s*((?:gen)?\\s*\\w+\\(.*\\)\\s*=\\s*$))'
+    'increaseIndentPattern': '(?x)^\\s*
+      (
+        (catch|class|elif|else|except
+          |finally|for|if|inline-macro
+          |macro|match|provide|require
+          |require-macros|try|unless|with|while)\\b.*:\\s*$
+        |^\\s*((?:gen)?\\s*\\w+\\(.*\\)\\s*[+\\-*/~^<>=%&|?!#]+\\s*$)
+      )'
     'decreaseIndentPattern': '^\\s*(catch|elif|else|finally)\\b.*:'
