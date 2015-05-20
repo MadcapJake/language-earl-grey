@@ -56,7 +56,7 @@
   }
   {
     'comment': 'special named tuple construct'
-    'begin': '(?:^|[^\\w\\$\\-])(\\#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\{'
+    'begin': '(?:^|[^\\w\\$\\-])(?=\\#)(\\#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\{'
     'beginCaptures':
       '1':
         'name': 'storage.language.named-tuple.earl-grey'
