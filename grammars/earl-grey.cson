@@ -56,17 +56,23 @@
   }
   {
     'comment': 'special named tuple construct'
-    'begin': '(?x)
-      (\\#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\{'
-    'beginCaptures':
-      '1':
-        'name': 'storage.language.named-tuple.earl-grey'
+    'begin': '(?=\\#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?\\{)'
     'end': '(\\})'
     'endCaptures':
       '1':
         'name': 'punctuation.definition.named-tuple.end.earl-grey'
     'name': 'meta.named-tuple.earl-grey'
     'patterns': [
+      {
+        'begin': '(?=\\#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?\\{)'
+        'end': '(?=\\s*\\{)'
+        'patterns': [
+          {
+            'match': '(\\#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?={)'
+            'name': 'storage.language.named-tuple.earl-grey'
+          }
+        ]
+      }
       {
         'begin': '(\\{)'
         'beginCaptures':
