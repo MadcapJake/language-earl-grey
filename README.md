@@ -6,49 +6,26 @@ Adds syntax highlighting, snippets, and repple support to Earl Grey files in Ato
 
 ## Status
 
-Still not finished but starting to look good!
+Starting to come together.  A few work areas listed below but it already is
+fairly useable.  Please give it a try and let me know what needs fixing!
 
 ## Todo
 
 * Syntax Highlighting
-  * ~~Comments~~
-  * ~~Numbers~~
-    * ~~Decimal~~
-    * ~~Radix~~
-  * ~~Variables~~
-    * ~~`let` keyword~~
-    * ~~`var` keyword~~
-    * variable names
-    * ~~`where` keyword~~
-    * ~~`globals` keyword~~
-  * ~~Strings~~
-    * ~~Double quoted strings~~
-    * ~~Escapes~~
-    * ~~single-quoted strings~~
-    * ~~single-quoted string interpolation~~ *(no keywords though)*
-    * ~~prefix dot strings~~
-  * Arrays/Objects
-    * array notation
-    * object notation
-    * object notation with string keys
-    * mixable array/object notation
-  * Functions
-    * Calling
-      * postcircumfix parens notation
-      * postcircumfix braces notation
-      * with-notation
-      * with-notation placeholders
-      * with-notation single argument
-      * prefix splicing operator
-      * bracket circumfix splicing operator
-      * juxtaposition splicing operator
-    * Declaring
-      * postfix `=` and block notation
-      * postfix `=` and arrow notation
-      * postfix `=` inline notation
+  * Errors
+  * Function Declarations
+  * Pattern matching
+  * Regular expressions
+  * imports and file syntax
+  * Document building syntax
+  * Async*
+  * Classes*
+  * macros*
 * Snippets
 * Autocomplete hooks
 * Folding hooks
+
+_*: not sure if these will need any adjustments_
 
 ## How can I help?
 
