@@ -57,7 +57,7 @@
   {
     'comment': 'special named tuple construct'
     'begin': '(?x)
-      (?:^|[^\\w\\$\\-])(?=\\#)
+      (?=\\#)
       (\\#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\{'
     'beginCaptures':
       '1':
