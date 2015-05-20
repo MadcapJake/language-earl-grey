@@ -59,7 +59,11 @@
   }
   {
     'comment': 'postcircumfix curly function call'
-    'begin': '\\W(?<!#)(?=[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?(?:\\.([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?))*\\s*\\{)'
+    'begin': '(?x)
+      (?=[a-zA-Z$_]
+         (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
+         (?:\\.([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?))
+         *\\s*\\{)'
     'beginCaptures':
       '1':
         'name': 'support.function.dot-string.earl-grey'
@@ -86,7 +90,11 @@
   }
   {
     'comment': 'postcircumfix parens function call'
-    'begin': '(?=[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?(?:\\.([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?))*\\s*\\()'
+    'begin': '(?x)
+      (?=[a-zA-Z$_]
+         (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
+         (?:\\.([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?))
+         *\\s*\\()'
     'beginCaptures':
       '1':
         'name': 'support.function.dot-string.earl-grey'
