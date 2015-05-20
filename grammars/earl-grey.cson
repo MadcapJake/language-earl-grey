@@ -285,7 +285,7 @@
   string:
     'patterns': [
       {
-        'match': '(\\.)([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?=[\\(\\{\\[\\s;,:])'
+        'match': '(\\.)([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?=[\\)\\}\\]\\s;,:])'
         'captures':
           '1':
             'name': 'punctuation.definition.string.dot.earl-grey'
