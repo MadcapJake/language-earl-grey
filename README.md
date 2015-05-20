@@ -7,7 +7,7 @@ Adds syntax highlighting, snippets, and repple support to Earl Grey files in Ato
 ## Status
 
 Starting to come together.  A few work areas listed below but it already is
-fairly useable.  Please give it a try and let me know what needs fixing!
+fairly useable.  Please give it's a try and let me know what needs fixing!
 
 ## Todo
 
