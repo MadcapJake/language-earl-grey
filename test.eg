@@ -10,7 +10,7 @@ key-dash
 key x
 key +x; key @x; key .x ; key "x"; key 0; .asdasd
 key (x); key [x]; key {x}
-nokey.x; nokey{x}
+nokey.x(); nokey{x}
 key x + y
 key key x
 x + key y
@@ -20,13 +20,14 @@ key: x
 key nokey: y
 key x > nokey: z
 x + key nokey: z
-
+x and {y, z}
 x + nokey: y
 x mod nokey: y
 x = key: y ;; comments work after keywords!
 x each key: y
 x each* k ;;
-
+a.b{c.d, e.f}
+#a{}
 nokey mod: y ;; do not highlight nokey
 ;; because mod is an operator
 
