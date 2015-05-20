@@ -98,15 +98,29 @@
          (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
          (?:\\.([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?))
          *\\s*\\{)'
-    'beginCaptures':
-      '1':
-        'name': 'support.function.dot-string.earl-grey'
     'end': '(\\})'
     'endCaptures':
       '1':
         'name': 'punctuation.definition.arguments.curly.end.earl-grey'
     'name': 'meta.function-call.curly.earl-grey'
     'patterns': [
+      {
+        'begin': '(?x)
+          (?=[a-zA-Z$_]
+             (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
+             (?:\\.([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?))
+             *\\s*\\{)'
+        'end': '(?=\\s*\\{)'
+        'patterns': [
+          {
+            'match': '(?x)
+              \\.([a-zA-Z$_]
+                (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
+              (?=[\\s\\.\\{])'
+            'name': 'support.function.dotted.earl-grey'
+          }
+        ]
+      }
       {
         'begin': '(\\{)'
         'beginCaptures':
