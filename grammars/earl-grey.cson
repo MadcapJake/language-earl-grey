@@ -108,6 +108,12 @@
   {
     'include': '#keyword'
   }
+  {
+    'begin': '(#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?=\\{)'
+    'beginCaptures':
+      '1':
+        'name': 'constant.language.named-tuple.earl-grey'
+  }
 ]
 'repository':
   keyword:
@@ -153,7 +159,7 @@
       {
         'begin': '(?x)
           (?:
-            ^|
+            ^(?:\\s+)?|
             \\s(?:=|=>|->|%|with|where|each|each\\*|where|with)\\s+|
             \\S+(?<![+\\-*/~^<>%&|?!@#.])\\s+
           )
