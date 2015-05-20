@@ -55,6 +55,32 @@
     'include': '#string'
   }
   {
+    'begin': '(#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\{'
+    'beginCaptures':
+      '1':
+        'name': 'storage.language.named-tuple.earl-grey'
+    'end': '(\\})'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.named-tuple.end.earl-grey'
+    'name': 'meta.named-tuple.earl-grey'
+    'patterns': [
+      {
+        'begin': '(\\{)'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.definition.named-tuple.begin.earl-grey'
+        'contentName': 'meta.named-tuple.inside.earl-grey'
+        'end': '(?=\\})'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+    ]
+  }
+  {
     'include': '#method'
   }
   {
@@ -121,32 +147,6 @@
   }
   {
     'include': '#keyword'
-  }
-  {
-    'begin': '(#[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\{'
-    'beginCaptures':
-      '1':
-        'name': 'storage.language.named-tuple.earl-grey'
-    'end': '(\\})'
-    'endCaptures':
-      '1':
-        'name': 'punctuation.definition.named-tuple.end.earl-grey'
-    'name': 'meta.named-tuple.earl-grey'
-    'patterns': [
-      {
-        'begin': '(\\{)'
-        'beginCaptures':
-          '1':
-            'name': 'punctuation.definition.named-tuple.begin.earl-grey'
-        'contentName': 'meta.named-tuple.inside.earl-grey'
-        'end': '(?=\\})'
-        'patterns': [
-          {
-            'include': '$self'
-          }
-        ]
-      }
-    ]
   }
 ]
 'repository':
