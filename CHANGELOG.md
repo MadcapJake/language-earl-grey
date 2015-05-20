@@ -4,7 +4,24 @@ This project attempts to adhere to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Changed
-- *Nothing yet*
+- *nothing yet*
+
+## [0.5.0] - 2015-05-20
+### Added
+- Numbers section to `docs.eg`
+- Arrays and objects section to `docs.eg`
+- Functions section to `docs.eg`
+- Named tuple rule
+- All regular function calls should be covered
+- dot string as function rule
+
+### Changed
+- Fixed radix numbers
+- Fairly robust set of keyword rules
+- Improved dot strings
+- Separated dotted functions
+- Improved autoindent (now works after any hanging operator)
+- Adjusted todo list and status
 
 ## [0.4.10] - 2015-05-16
 ### Added
@@ -39,7 +56,8 @@ This project attempts to adhere to [Semantic Versioning](http://semver.org/).
 - Interpolation now does not show keywords due to current difficulties getting
   it to work
 
-[unreleased]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.10...HEAD
+[unreleased]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.10...v0.5.0
 [0.4.10]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.9...v0.4.10
 [0.4.9]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.8...v0.4.9
 [0.4.8]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.7...v0.4.8
