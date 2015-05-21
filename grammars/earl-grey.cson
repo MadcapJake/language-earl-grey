@@ -93,6 +93,33 @@
     ]
   }
   {
+    'comment': 'with-notation'
+    'begin': '(?x)
+    (?:
+      (?= [a-zA-Z$_]
+          \\s+with\\s)|
+      (?<=[\\}\\)\\]]
+          \\s+with\\s)
+    )'
+    'end': '(?=$\\n?|[;,])'
+    'name': 'meta.function-call.with.earl-grey'
+    'patterns': [
+      {
+        'begin': '\\s(with)\\s'
+        'beginCaptures':
+          '1':
+            'name': 'keyword.operator.with.earl-grey'
+        'contentName': 'meta.function-call.with.argument.earl-grey'
+        'end': '(?=$\\n?|[;,])'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+    ]
+  }
+  {
     'include': '#method'
   }
   {
@@ -207,62 +234,6 @@
                 'name': 'punctuation.definition.arguments.curly.begin.earl-grey'
             'contentName': 'meta.function-call.curly.arguments.earl-grey'
             'end': '(?=\\{)'
-            'patterns': [
-              {
-                'include': '$self'
-              }
-            ]
-          }
-        ]
-      }
-      {
-        'comment': 'with-notation function call'
-        'begin': '(?x)
-        (?:
-          (?= [a-zA-Z$_]
-              (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
-              (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s+with\\s)|
-          (?<=[\\}\\)\\]])
-          (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s+with\\s)|
-          (?<=[\\}\\)\\]])
-          (?= \\s+with\\s)
-        )'
-        'end': '(?=$\\n?|[;,])'
-        'name': 'meta.function-call.with.earl-grey'
-        'patterns': [
-          {
-            'begin': '(?x)
-            (?:
-              (?= [a-zA-Z$_]
-                  (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
-                  (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  \\s+with\\s)|
-              (?<=[\\}\\)\\]])
-              (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  \\s+with\\s)|
-              (?<=[\\}\\)\\]])
-              (?= \\s+with\\s)
-            )'
-            'end': '(?=\\swith\\s)'
-            'patterns': [
-              {
-                'match': '(?x)
-                  \\.([a-zA-Z$_]
-                    (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
-                  (?=[\\s\\.\\(])'
-                'name': 'support.function.dotted.earl-grey'
-              }
-            ]
-          }
-          {
-            'begin': '\\s(with)\\s'
-            'beginCaptures':
-              '1':
-                'name': 'keyword.operator.with.earl-grey'
-            'contentName': 'meta.function-call.with.argument.earl-grey'
-            'end': '(?=$\\n?|[;,])'
             'patterns': [
               {
                 'include': '$self'
