@@ -96,10 +96,10 @@
     'comment': 'with-notation'
     'begin': '(?x)
     (?:
-      (?= [a-zA-Z$_]
-          \\s+with\\s)|
+      (?<=[a-zA-Z$_])
+      (?= \\s+with\\s)|
       (?<=[\\}\\)\\]]
-          \\s+with\\s)
+      (?= \\s+with\\s)
     )'
     'end': '(?=$\\n?|[;,])'
     'name': 'meta.function-call.with.earl-grey'
