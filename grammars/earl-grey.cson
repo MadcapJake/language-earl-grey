@@ -26,6 +26,9 @@
     'name': 'storage.type.function.earl-grey'
   }
   {
+    'match': '[^\\w\\$](var|let)[^\\w\\$]'
+  }
+  {
     'match': '\\b(?<!\\.)(true)(?!\\s*[:=][^=])\\b'
     'name': 'constant.language.boolean.true.earl-grey'
   }
