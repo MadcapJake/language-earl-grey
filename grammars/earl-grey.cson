@@ -257,9 +257,9 @@
             ]
           }
           {
-            'begin': '\\swith\\s'
+            'begin': '\\s(with)\\s'
             'beginCaptures':
-              '0':
+              '1':
                 'name': 'keyword.operator.with.earl-grey'
             'contentName': 'meta.function-call.curly.arguments.earl-grey'
             'end': '(?=$\\n?|[;,])'
