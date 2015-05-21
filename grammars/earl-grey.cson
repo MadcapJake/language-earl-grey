@@ -96,80 +96,17 @@
     'include': '#method'
   }
   {
-    'comment': 'postcircumfix curly function call'
-    'begin': '(?x)
-    (?:
-      (?= [a-zA-Z$_]
-          (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
-          (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-          \\s*\\{)|
-      (?<=[\\}\\)\\]])
-      (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-          \\s*\\{)
-    )'
-    'end': '(\\})'
-    'endCaptures':
-      '1':
-        'name': 'punctuation.definition.arguments.curly.end.earl-grey'
-    'name': 'meta.function-call.curly.earl-grey'
-    'patterns': [
-      {
-        'begin': '(?x)
-        (?:
-          (?= [a-zA-Z$_]
-              (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
-              (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s*\\{)|
-          (?<=[\\}\\)\\]])
-          (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s*\\{)
-        )'
-        'end': '(?=\\s*\\{)'
-        'patterns': [
-          {
-            'match': '(?x)
-              \\.
-              ([a-zA-Z$_]
-                (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
-              (?=[\\s\\.\\{])'
-            'name': 'support.function.dotted.earl-grey'
-          }
-        ]
-      }
-      {
-        'begin': '(\\{)'
-        'beginCaptures':
-          '1':
-            'name': 'punctuation.definition.arguments.curly.begin.earl-grey'
-        'contentName': 'meta.function-call.curly.arguments.earl-grey'
-        'end': '(?=\\})'
-        'patterns': [
-          {
-            'include': '$self'
-          }
-        ]
-      }
-    ]
+    'include': '#function'
   }
   {
-    'comment': 'postcircumfix parens function call'
-    'begin': '(?x)
-    (?:
-      (?= [a-zA-Z$_]
-          (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
-          (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-          \\s*\\()|
-      (?<=[\\}\\)\\]])
-      (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-          \\s*\\()
-    )'
-    'end': '(\\))'
-    'endCaptures':
-      '1':
-        'name': 'punctuation.definition.arguments.paren.end.earl-grey'
-    'name': 'meta.function-call.paren.earl-grey'
+    'include': '#keyword'
+  }
+]
+'repository':
+  function:
     'patterns': [
       {
+        'comment': 'postcircumfix parens function call'
         'begin': '(?x)
         (?:
           (?= [a-zA-Z$_]
@@ -180,37 +117,50 @@
           (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
               \\s*\\()
         )'
-        'end': '(?=\\s*\\()'
-        'patterns': [
-          {
-            'match': '(?x)
-              \\.([a-zA-Z$_]
-                (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
-              (?=[\\s\\.\\(])'
-            'name': 'support.function.dotted.earl-grey'
-          }
-        ]
-      }
-      {
-        'begin': '(\\()'
-        'beginCaptures':
+        'end': '(\\))'
+        'endCaptures':
           '1':
-            'name': 'punctuation.definition.arguments.paren.begin.earl-grey'
-        'contentName': 'meta.function-call.paren.arguments.earl-grey'
-        'end': '(?=\\))'
+            'name': 'punctuation.definition.arguments.paren.end.earl-grey'
+        'name': 'meta.function-call.paren.earl-grey'
         'patterns': [
           {
-            'include': '$self'
+            'begin': '(?x)
+            (?:
+              (?= [a-zA-Z$_]
+                  (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
+                  (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+                  \\s*\\()|
+              (?<=[\\}\\)\\]])
+              (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+                  \\s*\\()
+            )'
+            'end': '(?=\\s*\\()'
+            'patterns': [
+              {
+                'match': '(?x)
+                  \\.([a-zA-Z$_]
+                    (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
+                  (?=[\\s\\.\\(])'
+                'name': 'support.function.dotted.earl-grey'
+              }
+            ]
+          }
+          {
+            'begin': '(\\()'
+            'beginCaptures':
+              '1':
+                'name': 'punctuation.definition.arguments.paren.begin.earl-grey'
+            'contentName': 'meta.function-call.paren.arguments.earl-grey'
+            'end': '(?=\\))'
+            'patterns': [
+              {
+                'include': '$self'
+              }
+            ]
           }
         ]
       }
     ]
-  }
-  {
-    'include': '#keyword'
-  }
-]
-'repository':
   keyword:
     'patterns': [
       {
@@ -235,9 +185,6 @@
         'name': 'meta.symbol.macro.control.open.earl-grey'
         'patterns': [
           {
-            'include': '#keyword'
-          }
-          {
             'include': '#operator'
           }
           {
@@ -248,6 +195,12 @@
           }
           {
             'include': '#method'
+          }
+          {
+            'include': '#function'
+          }
+          {
+            'include': '#keyword'
           }
         ]
       }
@@ -279,9 +232,6 @@
         'name': 'meta.symbol.macro.control.colon.earl-grey'
         'patterns': [
           {
-            'include': '#keyword'
-          }
-          {
             'include': '#operator'
           }
           {
@@ -292,6 +242,12 @@
           }
           {
             'include': '#method'
+          }
+          {
+            'include': '#function'
+          }
+          {
+            'include': '#keyword'
           }
         ]
       }
