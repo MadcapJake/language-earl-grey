@@ -267,23 +267,26 @@
         'name': 'meta.symbol.macro.control.open.earl-grey'
         'patterns': [
           {
-            'include': '#operator'
+            'include': '$self'
           }
-          {
-            'include': '#string'
-          }
-          {
-            'include': '#number'
-          }
-          {
-            'include': '#method'
-          }
-          {
-            'include': '#function'
-          }
-          {
-            'include': '#keyword'
-          }
+          # {
+          #   'include': '#operator'
+          # }
+          # {
+          #   'include': '#string'
+          # }
+          # {
+          #   'include': '#number'
+          # }
+          # {
+          #   'include': '#method'
+          # }
+          # {
+          #   'include': '#function'
+          # }
+          # {
+          #   'include': '#keyword'
+          # }
         ]
       }
       {
@@ -314,23 +317,26 @@
         'name': 'meta.symbol.macro.control.colon.earl-grey'
         'patterns': [
           {
-            'include': '#operator'
+            'include': '$self'
           }
-          {
-            'include': '#string'
-          }
-          {
-            'include': '#number'
-          }
-          {
-            'include': '#method'
-          }
-          {
-            'include': '#function'
-          }
-          {
-            'include': '#keyword'
-          }
+          # {
+          #   'include': '#operator'
+          # }
+          # {
+          #   'include': '#string'
+          # }
+          # {
+          #   'include': '#number'
+          # }
+          # {
+          #   'include': '#method'
+          # }
+          # {
+          #   'include': '#function'
+          # }
+          # {
+          #   'include': '#keyword'
+          # }
         ]
       }
     ]
