@@ -50,6 +50,33 @@
     'name': 'variable.language.this.earl-grey'
   }
   {
+    'comment': 'with-notation'
+    'begin': '(?x)
+    (?:
+      (?<=[a-zA-Z$_])
+      (?= \\s+with\\s)|
+      (?<=[\\}\\)\\]])
+      (?= \\s+with\\s)
+    )'
+    'end': '(?=$\\n?|[;,])'
+    'name': 'meta.function-call.with.earl-grey'
+    'patterns': [
+      {
+        'begin': '\\s(with)\\s'
+        'beginCaptures':
+          '1':
+            'name': 'keyword.operator.with.earl-grey'
+        'contentName': 'meta.function-call.with.argument.earl-grey'
+        'end': '(?=$\\n?|[;,])'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+    ]
+  }
+  {
     'include': '#operator'
   }
   {
@@ -84,33 +111,6 @@
             'name': 'punctuation.definition.named-tuple.begin.earl-grey'
         'contentName': 'meta.named-tuple.inside.earl-grey'
         'end': '(?=\\})'
-        'patterns': [
-          {
-            'include': '$self'
-          }
-        ]
-      }
-    ]
-  }
-  {
-    'comment': 'with-notation'
-    'begin': '(?x)
-    (?:
-      (?<=[a-zA-Z$_])
-      (?= \\s+with\\s)|
-      (?<=[\\}\\)\\]])
-      (?= \\s+with\\s)
-    )'
-    'end': '(?=$\\n?|[;,])'
-    'name': 'meta.function-call.with.earl-grey'
-    'patterns': [
-      {
-        'begin': '\\s(with)\\s'
-        'beginCaptures':
-          '1':
-            'name': 'keyword.operator.with.earl-grey'
-        'contentName': 'meta.function-call.with.argument.earl-grey'
-        'end': '(?=$\\n?|[;,])'
         'patterns': [
           {
             'include': '$self'
