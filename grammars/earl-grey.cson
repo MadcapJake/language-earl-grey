@@ -225,12 +225,11 @@
               \\s+with\\s)|
           (?<=[\\}\\)\\]])
           (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s+with\\s)
+              \\s+with\\s)|
+          (?<=[\\}\\)\\]])
+          (?= \\s+with\\s)
         )'
         'end': '(?=$\\n?|[;,])'
-        'endCaptures':
-          '1':
-            'name': 'punctuation.definition.arguments.curly.end.earl-grey'
         'name': 'meta.function-call.with.earl-grey'
         'patterns': [
           {
@@ -242,7 +241,9 @@
                   \\s+with\\s)|
               (?<=[\\}\\)\\]])
               (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  \\s+with\\s)
+                  \\s+with\\s)|
+              (?<=[\\}\\)\\]])
+              (?= \\s+with\\s)
             )'
             'end': '(?=$\\n?|[;,])'
             'patterns': [
