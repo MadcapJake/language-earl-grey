@@ -245,7 +245,7 @@
               (?<=[\\}\\)\\]])
               (?= \\s+with\\s)
             )'
-            'end': '(?=$\\n?|[;,])'
+            'end': '(?=\\swith\\s)'
             'patterns': [
               {
                 'match': '(?x)
@@ -261,7 +261,7 @@
             'beginCaptures':
               '1':
                 'name': 'keyword.operator.with.earl-grey'
-            'contentName': 'meta.function-call.curly.arguments.earl-grey'
+            'contentName': 'meta.function-call.with.argument.earl-grey'
             'end': '(?=$\\n?|[;,])'
             'patterns': [
               {
