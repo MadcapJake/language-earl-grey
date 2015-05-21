@@ -1,10 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
-This project attempts to adhere to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Changed
-- *nothing yet*
+- Fixed dotted functions after lists
 
 ## [0.5.0] - 2015-05-20
 ### Added
