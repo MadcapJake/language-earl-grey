@@ -160,6 +160,116 @@
           }
         ]
       }
+      {
+        'comment': 'postcircumfix curly function call'
+        'begin': '(?x)
+        (?:
+          (?= [a-zA-Z$_]
+              (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
+              (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+              \\s*\\()|
+          (?<=[\\}\\)\\]])
+          (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+              \\s*\\()
+        )'
+        'end': '(\\))'
+        'endCaptures':
+          '1':
+            'name': 'punctuation.definition.arguments.curly.end.earl-grey'
+        'name': 'meta.function-call.curly.earl-grey'
+        'patterns': [
+          {
+            'begin': '(?x)
+            (?:
+              (?= [a-zA-Z$_]
+                  (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
+                  (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+                  \\s*\\()|
+              (?<=[\\}\\)\\]])
+              (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+                  \\s*\\()
+            )'
+            'end': '(?=\\s*\\()'
+            'patterns': [
+              {
+                'match': '(?x)
+                  \\.([a-zA-Z$_]
+                    (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
+                  (?=[\\s\\.\\(])'
+                'name': 'support.function.dotted.earl-grey'
+              }
+            ]
+          }
+          {
+            'begin': '(\\()'
+            'beginCaptures':
+              '1':
+                'name': 'punctuation.definition.arguments.curly.begin.earl-grey'
+            'contentName': 'meta.function-call.curly.arguments.earl-grey'
+            'end': '(?=\\))'
+            'patterns': [
+              {
+                'include': '$self'
+              }
+            ]
+          }
+        ]
+      }
+      {
+        'comment': 'with-notation function call'
+        'begin': '(?x)
+        (?:
+          (?= [a-zA-Z$_]
+              (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
+              (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+              \\s+with\\s)|
+          (?<=[\\}\\)\\]])
+          (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+              \\s+with\\s)
+        )'
+        'end': '(?=$\\n?|[;,])'
+        'endCaptures':
+          '1':
+            'name': 'punctuation.definition.arguments.curly.end.earl-grey'
+        'name': 'meta.function-call.with.earl-grey'
+        'patterns': [
+          {
+            'begin': '(?x)
+            (?:
+              (?= [a-zA-Z$_]
+                  (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
+                  (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+                  (?:\\s*\\(|\\s+with\\s)|
+              (?<=[\\}\\)\\]])
+              (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
+                  (?:\\s*\\(|\\s+with\\s))
+            )'
+            'end': '(?=$\\n?|[;,])'
+            'patterns': [
+              {
+                'match': '(?x)
+                  \\.([a-zA-Z$_]
+                    (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
+                  (?=[\\s\\.\\(])'
+                'name': 'support.function.dotted.earl-grey'
+              }
+            ]
+          }
+          {
+            'begin': '(?=\\swith\\s)'
+            'beginCaptures':
+              '1':
+                'name': 'punctuation.definition.arguments.curly.begin.earl-grey'
+            'contentName': 'meta.function-call.curly.arguments.earl-grey'
+            'end': '(?=$\\n?|[;,])'
+            'patterns': [
+              {
+                'include': '$self'
+              }
+            ]
+          }
+        ]
+      }
     ]
   keyword:
     'patterns': [
