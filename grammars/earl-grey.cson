@@ -256,10 +256,10 @@
             ]
           }
           {
-            'begin': '(?=\\swith\\s)'
+            'begin': '\\swith\\s'
             'beginCaptures':
-              '1':
-                'name': 'punctuation.definition.arguments.curly.begin.earl-grey'
+              '0':
+                'name': 'keyword.operator.with.earl-grey'
             'contentName': 'meta.function-call.curly.arguments.earl-grey'
             'end': '(?=$\\n?|[;,])'
             'patterns': [
