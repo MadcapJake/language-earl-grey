@@ -167,12 +167,12 @@
           (?= [a-zA-Z$_]
               (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
               (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s*\\()|
+              \\s*\\})|
           (?<=[\\}\\)\\]])
           (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s*\\()
+              \\s*\\})
         )'
-        'end': '(\\))'
+        'end': '(\\})'
         'endCaptures':
           '1':
             'name': 'punctuation.definition.arguments.curly.end.earl-grey'
@@ -184,29 +184,29 @@
               (?= [a-zA-Z$_]
                   (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
                   (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  \\s*\\()|
+                  \\s*\\{)|
               (?<=[\\}\\)\\]])
               (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  \\s*\\()
+                  \\s*\\{)
             )'
-            'end': '(?=\\s*\\()'
+            'end': '(?=\\s*\\{)'
             'patterns': [
               {
                 'match': '(?x)
                   \\.([a-zA-Z$_]
                     (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
-                  (?=[\\s\\.\\(])'
+                  (?=[\\s\\.\\{])'
                 'name': 'support.function.dotted.earl-grey'
               }
             ]
           }
           {
-            'begin': '(\\()'
+            'begin': '(\\{)'
             'beginCaptures':
               '1':
                 'name': 'punctuation.definition.arguments.curly.begin.earl-grey'
             'contentName': 'meta.function-call.curly.arguments.earl-grey'
-            'end': '(?=\\))'
+            'end': '(?=\\{)'
             'patterns': [
               {
                 'include': '$self'
@@ -239,10 +239,10 @@
               (?= [a-zA-Z$_]
                   (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
                   (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  (?:\\s*\\(|\\s+with\\s)|
+                  \\s+with\\s)|
               (?<=[\\}\\)\\]])
               (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  (?:\\s*\\(|\\s+with\\s))
+                  \\s+with\\s)
             )'
             'end': '(?=$\\n?|[;,])'
             'patterns': [
