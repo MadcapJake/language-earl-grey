@@ -5,6 +5,6 @@
     'commentStart': ';;'
     'increaseIndentPattern': '(?x)^\\s*
       (
-        [\\w\\$]\\b.*:\\s*$ | \\S\\s+[+\\-*/~^<>=%&|?!#]+\\s*$
+        [\\w\\$]\\b.*(:)\\s*$ | \\S\\s+([+\\-*/~^<>=%&|?!#]+)\\s*$
       )'
     'decreaseIndentPattern': '^\\s*(catch|elif|else|finally)\\b.*:'
