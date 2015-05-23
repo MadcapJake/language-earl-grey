@@ -15,8 +15,10 @@
   },
   "keywords": [
     "atom",
-    "syntax-highlighting",
     "earl-grey"
+    "language"
+    "syntax",
+    "editor",
   ],
   "author": "Jake Russo",
   "license": "MIT",
