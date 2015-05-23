@@ -6,6 +6,7 @@
 
 key-dash
 
+
 ;; Keyword highlight test
 key x
 key +x; key @x; key .x ; key "x"; key 0; .asdasd

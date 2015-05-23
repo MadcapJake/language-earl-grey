@@ -5,7 +5,9 @@
     'commentStart': ';;'
     'increaseIndentPattern': '(?x)
       (?:
-          [\\w\\$]\\b.*(:)\\s*$
-        | \\S\\s+([+\\-*/~^<>=%&|?!#]+)\\s*$
-      )'
+          [\\w\\$]\\b.*(:)
+        | \\S\\s+([+\\-*/~^<>=%&|?!#]+)
+        | [^\\w\\$\\-](and|each|each\\*|is|with|mod|not|or|when|where)
+      )
+      \\s*$'
     'decreaseIndentPattern': '^\\s*(catch|elif|else|finally)\\b.*:'
