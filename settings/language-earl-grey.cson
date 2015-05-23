@@ -3,9 +3,9 @@
     'autoIndentOnPaste': true
     'tabLength': 3
     'commentStart': ';;'
-    'increaseIndentPattern': '(?x)^\\.*
+    'increaseIndentPattern': '(?x)
       (?:
-          [\\s\\{\\(\\[][\\w\\$](?:[\\w\\$\\-]*[\\w\\$])*\\b.*(:)\\s*$
+          [\\w\\$]\\b.*(:)\\s*$
         | \\S\\s+([+\\-*/~^<>=%&|?!#]+)\\s*$
       )'
     'decreaseIndentPattern': '^\\s*(catch|elif|else|finally)\\b.*:'
