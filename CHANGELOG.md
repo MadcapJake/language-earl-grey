@@ -2,8 +2,17 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## [0.5.28] - 2015-05-22
+### Added
+- Function with-notation highlights
+- variable assignment highlights
+- Special keywords added to autoindent
+
 ### Changed
 - Fixed dotted functions after lists
+- Much improved function call rules
+- Fixed colon and op autoindent rules
 
 ## [0.5.0] - 2015-05-20
 ### Added
@@ -55,7 +64,8 @@ All notable changes to this project will be documented in this file.
 - Interpolation now does not show keywords due to current difficulties getting
   it to work
 
-[unreleased]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.0...HEAD
+[unreleased]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.28...HEAD
+[0.5.0]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.0...v0.5.28
 [0.5.0]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.10...v0.5.0
 [0.4.10]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.9...v0.4.10
 [0.4.9]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.8...v0.4.9
