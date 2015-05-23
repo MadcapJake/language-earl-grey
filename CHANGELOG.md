@@ -3,7 +3,7 @@ All notable releases and changes to this project will be documented in this file
 
 ## [Unreleased][unreleased]
 
-## [0.5.28] - 2015-05-22
+## [0.5.29] - 2015-05-22
 ### Added
 - Function with-notation highlights
 - variable assignment highlights
@@ -64,8 +64,8 @@ All notable releases and changes to this project will be documented in this file
 - Interpolation now does not show keywords due to current difficulties getting
   it to work
 
-[unreleased]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.28...HEAD
-[0.5.28]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.0...v0.5.28
+[unreleased]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.29...HEAD
+[0.5.29]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.0...v0.5.29
 [0.5.0]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.10...v0.5.0
 [0.4.10]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.9...v0.4.10
 [0.4.9]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.8...v0.4.9
