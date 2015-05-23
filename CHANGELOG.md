@@ -1,5 +1,5 @@
 # Change Log
-All notable changes to this project will be documented in this file.
+All notable releases and changes to this project will be documented in this file. The development of this project is highly iterative so expect frequent patch releases. Minor releases are reserved for my personal opinion on milestones of the project.  I expect near complete syntax coverage by `0.9.0` and all the bells and whistles of an Atom language package by `1.0.0`.
 
 ## [Unreleased][unreleased]
 
