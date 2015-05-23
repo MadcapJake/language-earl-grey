@@ -65,7 +65,7 @@ All notable changes to this project will be documented in this file.
   it to work
 
 [unreleased]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.28...HEAD
-[0.5.0]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.0...v0.5.28
+[0.5.28]: https://github.com/madcapjake/language-earl-grey/compare/v0.5.0...v0.5.28
 [0.5.0]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.10...v0.5.0
 [0.4.10]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.9...v0.4.10
 [0.4.9]: https://github.com/madcapjake/language-earl-grey/compare/v0.4.8...v0.4.9
