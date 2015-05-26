@@ -53,11 +53,18 @@
     'comment': 'with-notation'
     'begin': '(?x)
     (?:
+      (\\.[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])*)
+      (?= \\s+with\\s)
+    |
       (?<=[a-zA-Z$_])
-      (?= \\s+with\\s)|
+      (?= \\s+with\\s)
+    |
       (?<=[\\}\\)\\]])
       (?= \\s+with\\s)
     )'
+    'beginCaptures':
+      '1':
+        'name': 'support.function.dotted.earl-grey'
     'end': '(?=$\\n?|[;,])'
     'name': 'meta.function-call.with.earl-grey'
     'patterns': [
