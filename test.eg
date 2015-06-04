@@ -18,7 +18,7 @@ but-can-it-do-ops +
 
 check-it:
    still-works:
-      {1, 2, 3}.reversed.sort().map with
+      {1, 2, 3}.reversed.reversed.awesome().sort().map with
          x -> x * x
       (1, 2, 3) +
 
