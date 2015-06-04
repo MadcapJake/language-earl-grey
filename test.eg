@@ -3,8 +3,24 @@
 "Hello!\nWorld!"
 'sasadads\ssdasdasd{ @method variable }'
 .dotted-string
-
+{
 key-dash
+but-can-it-do-ops +
+   yes-it-can:
+      100 +
+         print "So cool!"
+         100
+      {that = "is awesome", you = "are hilarious"} +
+         jiminy-crickets:
+            oliver-twist each mr-bojangles +
+               kittens =
+                  12
+
+check-it:
+   still-works:
+      {1, 2, 3}.reversed.sort().map with
+         x -> x * x
+      (1, 2, 3) +
 
 
 ;; Keyword highlight test
