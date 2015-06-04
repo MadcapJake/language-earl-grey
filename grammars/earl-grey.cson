@@ -312,24 +312,6 @@
           {
             'include': '$self'
           }
-          # {
-          #   'include': '#operator'
-          # }
-          # {
-          #   'include': '#string'
-          # }
-          # {
-          #   'include': '#number'
-          # }
-          # {
-          #   'include': '#method'
-          # }
-          # {
-          #   'include': '#function'
-          # }
-          # {
-          #   'include': '#keyword'
-          # }
         ]
       }
     ]
