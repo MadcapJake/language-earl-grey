@@ -25,8 +25,12 @@ check-it:
 
 if total awesomeness > great stupidity:
    print "You've won!"
+   not-sure-what-this-does @@ but-it-wont-capture
 else:
    print "Keep trying!"
+   needs-work ++ you
+
+
 
 ;; Keyword highlight test
 key x
