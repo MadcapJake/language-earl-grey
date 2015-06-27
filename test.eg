@@ -23,7 +23,7 @@ check-it:
          x -> x * x
       (1, 2, 3) +
 
-if awesomeness > stupidity:
+if total awesomeness > great stupidity:
    print "You've won!"
 else:
    print "Keep trying!"
