@@ -50,38 +50,7 @@
     'name': 'variable.language.this.earl-grey'
   }
   {
-    'comment': 'with-notation'
-    'begin': '(?x)
-    (?:
-      (\\.[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])*)
-      (?= \\s+with\\s)
-    |
-      (?<=[a-zA-Z$_])
-      (?= \\s+with\\s)
-    |
-      (?<=[\\}\\)\\]])
-      (?= \\s+with\\s)
-    )'
-    'beginCaptures':
-      '1':
-        'name': 'support.function.dotted.earl-grey'
-    'end': '(?=$\\n?|[;,])'
-    'name': 'meta.function-call.with.earl-grey'
-    'patterns': [
-      {
-        'begin': '\\s(with)\\s'
-        'beginCaptures':
-          '1':
-            'name': 'keyword.operator.with.earl-grey'
-        'contentName': 'meta.function-call.with.argument.earl-grey'
-        'end': '(?=$\\n?|[;,])'
-        'patterns': [
-          {
-            'include': '$self'
-          }
-        ]
-      }
-    ]
+    'include': '#with'
   }
   {
     'include': '#operator'
@@ -133,10 +102,40 @@
     'include': '#function'
   }
   {
+    'include': '#builtin'
+  }
+  {
     'include': '#keyword'
   }
 ]
 'repository':
+  with:
+    'patterns': [
+      {
+        'comment': 'with-notation'
+        'begin': '(?<=[a-zA-Z$_\\}\\)\\]])\\s+(with)(?=\\s)'
+        'beginCaptures':
+          '1':
+            'name': 'keyword.operator.with.earl-grey'
+        'end': '(?=$\\n?|[;,])'
+        'name': 'meta.function-call.with.earl-grey'
+        'patterns': [
+          {
+            'begin': '\\s(with)(?=\\s)'
+            'beginCaptures':
+              '1':
+                'name': 'keyword.operator.with.earl-grey'
+            'contentName': 'meta.function-call.with.argument.earl-grey'
+            'end': '(?=$\\n?|[;,])'
+            'patterns': [
+              {
+                'include': '$self'
+              }
+            ]
+          }
+        ]
+      }
+    ]
   function:
     'patterns': [
       {
@@ -244,7 +243,7 @@
               '1':
                 'name': 'punctuation.definition.arguments.curly.begin.earl-grey'
             'contentName': 'meta.function-call.curly.arguments.earl-grey'
-            'end': '(?=\\{)'
+            'end': '(?=\\})'
             'patterns': [
               {
                 'include': '$self'
@@ -329,7 +328,7 @@
   string:
     'patterns': [
       {
-        'match': '(\\.)([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?=[\\)\\}\\]\\s;,:\\.])'
+        'match': '(?<=[\\s\\{\\[\\(])(\\.)([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?=[\\)\\}\\]\\s;,:\\.])'
         'captures':
           '1':
             'name': 'punctuation.definition.string.dot.earl-grey'
@@ -424,6 +423,13 @@
         'comment': 'A symbol is any sequence of word characters and dashes'
         'match': '\\b[\\w\\$](?:[\\w\\$\\-]*[\\w\\$])?\\b'
         'name': 'meta.keyword.symbol.earl-grey'
+      }
+    ]
+  builtin:
+    'patterns': [
+      {
+        'match': '(?<![\\w\\$\\-])(?:await|break|chain|continue|else|expr-value|match|return|yield)(?![\\w\\$\\-])'
+        'name': 'keyword.control.builtin.earl-grey'
       }
     ]
   operator:
