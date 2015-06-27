@@ -31,6 +31,7 @@ nokey.x(); nokey{x}
 key x + y
 key key x
 x + key y
+x - key y
 nokey + x
 nokey
 key: x

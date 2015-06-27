@@ -435,7 +435,7 @@
   operator:
     'patterns': [
       {
-        'match': '([+\\-*/~^<>=%&|?!]+)(?!\\s*:)|([\\.@#](?=\\s))'
+        'match': '([+*/~^<>=%&|?!]+)(?!\\s*:)|([\\.@#\\-](?=\\s))'
         'name': 'keyword.operator.char.earl-grey'
       }
       {
