@@ -46,7 +46,7 @@
     'name': 'constant.language.null.earl-grey'
   }
   {
-    'match': '\\b(?<!\\.)(this)(?!\\s*[:=][^=])\\b'
+    'match': '(?:[^\\w\\$\\-])(?<!\\.)(this)(?!\\s*[:=][^=])(?:[^\\w\\$\\-])'
     'name': 'variable.language.this.earl-grey'
   }
   {

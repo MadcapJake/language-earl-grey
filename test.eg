@@ -21,7 +21,7 @@ check-it:
    still-works:
       {1, 2, 3}.reversed.reversed.awesome{}.that.sort().what.map with
          x -> x * x
-      (1, 2, 3) +
+      (1, 2, 3) + this
 
 if total awesomeness > great stupidity:
    print "You've won!"
