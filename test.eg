@@ -22,6 +22,10 @@ check-it:
          x -> x * x
       (1, 2, 3) +
 
+if awesomeness > stupidity:
+   print "You've won!"
+else:
+   print "Keep trying!"
 
 ;; Keyword highlight test
 key x
