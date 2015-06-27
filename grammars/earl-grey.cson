@@ -113,26 +113,22 @@
     'patterns': [
       {
         'comment': 'with-notation'
-        'begin': '(?<=[a-zA-Z$_\\}\\)\\]])\\s+(with)(?=\\s)'
+        'begin': '(?x)
+        (?:
+          (?<=[a-zA-Z$_\\}\\)\\]])
+        |
+          (\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
+        )
+        \\s+(with)(?=\\s)'
         'beginCaptures':
           '1':
+            'name': 'support.function.dotted.earl-grey'
+          '2':
             'name': 'keyword.operator.with.earl-grey'
         'end': '(?=$\\n?|[;,])'
         'name': 'meta.function-call.with.earl-grey'
         'patterns': [
-          {
-            'begin': '\\s(with)(?=\\s)'
-            'beginCaptures':
-              '1':
-                'name': 'keyword.operator.with.earl-grey'
-            'contentName': 'meta.function-call.with.argument.earl-grey'
-            'end': '(?=$\\n?|[;,])'
-            'patterns': [
-              {
-                'include': '$self'
-              }
-            ]
-          }
+          'include': '$self'
         ]
       }
     ]

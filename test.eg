@@ -19,7 +19,7 @@ but-can-it-do-ops +
 
 check-it:
    still-works:
-      {1, 2, 3}.reversed.reversed.awesome{}.sort().map with
+      {1, 2, 3}.reversed.reversed.awesome{}.sort().what.map with
          x -> x * x
       (1, 2, 3) +
 
@@ -30,7 +30,8 @@ else:
    print "Keep trying!"
    needs-work ++ you
 
-
+;; with tests
+needs-obj('awesome') with {"greatness values"}
 
 ;; Keyword highlight test
 key x
