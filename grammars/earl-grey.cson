@@ -107,6 +107,17 @@
   {
     'include': '#keyword'
   }
+  {
+    'comment': 'Try and capture all assigments'
+    'match': '(\\.)?([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)\\s+(=)'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.assignment.field.earl-grey'
+      '2':
+        'name': 'variable.assignment.earl-grey'
+      '3':
+        'name': 'punctuation.definition.assignment.equal.earl-grey'
+  }
 ]
 'repository':
   with:
@@ -171,7 +182,7 @@
                 'match': '(?x)
                   \\.([a-zA-Z$_]
                     (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
-                  (?=[\\s\\.\\(])'
+                  (?=\\()'
                 'name': 'support.function.dotted.earl-grey'
               }
             ]
@@ -228,7 +239,7 @@
                 'match': '(?x)
                   \\.([a-zA-Z$_]
                     (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)
-                  (?=[\\s\\.\\{])'
+                  (?=\\{)'
                 'name': 'support.function.dotted.earl-grey'
               }
             ]
