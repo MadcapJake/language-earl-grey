@@ -52,6 +52,12 @@ elif:
 else:
    add everything: the-castle
 
+;; class test
+class Dog:
+   constructor(@name, @breed) = pass
+
+   bark(@, )
+
 ;; Keyword highlight test
 key x
 key +x; key @x; key .x ; key "x"; key 0; .asdasd
