@@ -21,6 +21,33 @@
       }
     ]
   }
+  # {
+  #   'match': '(\\([^()]*?\\))\\s*(->)'
+  #   'captures':
+  #     '1':
+  #       'name': 'variable.parameter.function.earl-grey'
+  #     '2':
+  #       'name': 'storage.type.function.earl-grey'
+  #   'name': 'meta.inline.function.parens.earl-grey'
+  # }
+  # {
+  #   'match': '({[^()]*?})\\s*(->)'
+  #   'captures':
+  #     '1':
+  #       'name': 'variable.parameter.function.earl-grey'
+  #     '2':
+  #       'name': 'storage.type.function.earl-grey'
+  #   'name': 'meta.inline.function.curly.earl-grey'
+  # }
+  # {
+  #   'match': '([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)\\s*(->)'
+  #   'captures':
+  #     '1':
+  #       'name': 'variable.parameter.function.earl-grey'
+  #     '2':
+  #       'name': 'storage.type.function.earl-grey'
+  #   'name': 'meta.inline.function.bare.earl-grey'
+  # }
   {
     'match': '->'
     'name': 'storage.type.function.earl-grey'
@@ -168,11 +195,11 @@
           (?= [a-zA-Z$_]
               (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
               (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s*\\()
+              \\()
         |
           (?<=[\\}\\)\\]\\w])
           (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)+
-              \\s*\\()
+              \\()
         )'
         'end': '(\\))'
         'endCaptures':
@@ -186,13 +213,13 @@
               (?= [a-zA-Z$_]
                   (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
                   (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  \\s*\\()
+                  \\()
             |
               (?<=[\\}\\)\\]\\w])
               (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)+
-                  \\s*\\()
+                  \\()
             )'
-            'end': '(?=\\s*\\()'
+            'end': '(?=\\()'
             'patterns': [
               {
                 'match': '(?x)
@@ -225,11 +252,11 @@
           (?= [a-zA-Z$_]
               (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
               (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-              \\s*\\{)
+              \\{)
         |
           (?<=[\\}\\)\\]\\w])
           (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)+
-              \\s*\\{)
+              \\{)
         )'
         'end': '(\\})'
         'endCaptures':
@@ -243,13 +270,13 @@
               (?= [a-zA-Z$_]
                   (?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?
                   (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)*
-                  \\s*\\{)
+                  \\{)
             |
               (?<=[\\}\\)\\]\\w])
               (?= (?:\\.[a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)+
-                  \\s*\\{)
+                  \\{)
             )'
-            'end': '(?=\\s*\\{)'
+            'end': '(?=\\{)'
             'patterns': [
               {
                 'match': '(?x)
@@ -289,6 +316,7 @@
             (?=@?[a-zA-Z$0-9_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)|
             (?=\\..*?(?=[\\s;,]))|
             (?=(?:\\"{3}|[\\"\\\\\']).*(?:\\"{3}|[\\"\\\\\']))|
+            (?={[^{}]*?}|\\([^\\(\\)]*?\\)|\\[[^\\[\\]]*?\\])|
             (?=\\d(?:[\\.\\w]*\\d)?)
           )'
         'beginCaptures':
