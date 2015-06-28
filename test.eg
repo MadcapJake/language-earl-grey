@@ -40,7 +40,8 @@ obj = {
    tree = "schmoh cheah"
 }
 obj.field = {
-   var that = super cool: "wowzers!"
+   that = super cool: "wowzers!"
+   thatFunc = {x} -> x
 }
 
 ;; Keyword highlight test

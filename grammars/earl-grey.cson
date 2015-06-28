@@ -109,14 +109,12 @@
   }
   {
     'comment': 'Try and capture all assigments'
-    'match': '(\\.)?([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)\\s+(=)'
+    'match': '(\\.)?([a-zA-Z$_](?:[a-zA-Z$0-9_-]*[a-zA-Z$0-9_])?)\\s+(?=\\=)'
     'captures':
       '1':
         'name': 'punctuation.definition.assignment.field.earl-grey'
       '2':
         'name': 'variable.assignment.earl-grey'
-      '3':
-        'name': 'punctuation.definition.assignment.equal.earl-grey'
   }
 ]
 'repository':
@@ -442,7 +440,7 @@
   operator:
     'patterns': [
       {
-        'match': '([+*/~^<>=%&|?!]+)|([\\.#\\-](?=\\s))|@+(?=\\s)'
+        'match': '([+*/~^<>%&|?!]+)|([\\.#\\-](?=\\s))|@+(?=\\s)|==+'
         'name': 'keyword.operator.char.earl-grey'
       }
       {
