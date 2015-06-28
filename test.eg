@@ -58,6 +58,18 @@ class Dog:
 
    bark(@, )
 
+;; error test
+try:
+   throw E.test.my-error("This is my error.")
+catch TypeError? e:
+   print "There was a type error."
+catch E.my-error? e:
+   print "My error!"
+catch e:
+   print "Some other error."
+finally:
+   print "We are done."
+
 ;; Keyword highlight test
 key x
 key +x; key @x; key .x ; key "x"; key 0; .asdasd

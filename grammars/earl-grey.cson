@@ -96,6 +96,9 @@
     ]
   }
   {
+    'include': '#error'
+  }
+  {
     'include': '#method'
   }
   {
@@ -118,6 +121,21 @@
   }
 ]
 'repository':
+  error:
+    'patterns': [
+      {
+        'match': '(?x)
+        (?<![\\w\\$])
+        E\\.[\\w\\$](?:[\\w\\$\\-]*[\\w\\$])?
+        (?:\\.[\\w\\$](?:[\\w\\$\\-]*[\\w\\$])?)*
+        (?=[\\(\\{\\[\\?\\!\\s])'
+        'name': 'support.type.exception.earl-grey'
+      }
+      {
+        'match': '(?<![\\w\\$\\-])(?:Error|TypeError|ReferenceError)(?![\\w\\$\\-])'
+        'name': 'support.type.exception.earl-grey'
+      }
+    ]
   with:
     'patterns': [
       {
