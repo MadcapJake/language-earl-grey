@@ -379,13 +379,25 @@
   string:
     'patterns': [
       {
-        'match': '(?<=[\\s\\{\\[\\(])(\\.)([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?=[\\)\\}\\]\\s;,:\\.])'
+        'match': '(?x)
+        (?<=[\\s\\{\\[\\(])(\\.)
+        ([a-zA-Z$_](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)(?=[\\)\\}\\]\\s;,:\\.])'
         'captures':
           '1':
             'name': 'punctuation.definition.string.dot.earl-grey'
           '2':
             'name': 'string.dotted.earl-grey'
         'name': 'meta.string.dotted.earl-grey'
+      }
+      {
+        'match': '(?x)
+        (?<=[\\s:;,])\\.+(?:(?:\\.{2}|[\\w\\-]*)(\\/))*(\\w(?:[\\w\\-]*\\w)*)(?=[\\s;,])'
+        'captures':
+          '1':
+            'name': 'punctuation.definition.path.slash.earl-grey'
+          '2':
+            'name': 'variable.path.filename.earl-grey'
+        'name': 'meta.string.path.earl-grey'
       }
       {
         'begin': '"{3}'
