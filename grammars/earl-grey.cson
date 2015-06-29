@@ -3,6 +3,8 @@
   'eg'
 ]
 'name': 'Earl Grey'
+'foldingStartMarker': '.*(->|:|=|with)\\s*$|.*{\\s*$'
+'foldingStopMarker': '^\\s*$|^\\s*[}\\]]\\s*$'
 'patterns': [
   {
     'begin': '(^[ \\t]+)?(?=;;)'
