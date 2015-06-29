@@ -11,11 +11,9 @@ Still needs some features but already looks great. Check the [changelog](https:/
 ## Todo
 
 * Syntax Highlighting
-  * Errors
   * Function Declarations
   * Pattern matching
   * Regular expressions
-  * imports and file syntax
   * Document building syntax
   * Async*
   * Classes*
