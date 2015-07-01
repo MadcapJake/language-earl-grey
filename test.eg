@@ -1,3 +1,10 @@
+;; filepath tests
+require:
+   library
+   ./awesome
+   ./variable/greatness/file
+
+
 ;; Strings
 "Hello World!"
 "Hello!\nWorld!"
@@ -52,6 +59,15 @@ elif:
 else:
    add everything: the-castle
 
+;; nested if / elif / else test
+mad-function = bananas ->
+   if bananas > 5:
+      print "You've got a lot of bananas!"
+   elif bananas == 5:
+      print "You might want to consider getting more bananas"
+   else:
+      print "Go get more bananas now!"
+
 ;; class test
 class Dog:
    constructor(@name, @breed) = pass
@@ -98,7 +114,7 @@ nokey mod: y ;; do not highlight nokey
 ;; because mod is an operator
 
 ;; Highlight all of these:
-await; break; chain; continue; else; expr-value
+await; break; chain; continue; else:; expr-value
 match; return; yield
 
 ;; Edge-case highlighting test

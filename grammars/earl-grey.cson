@@ -493,8 +493,12 @@
   builtin:
     'patterns': [
       {
-        'match': '(?<![\\w\\$\\-])(?:await|break|chain|continue|elif|else|expr-value|if|match|return|yield)(?![\\w\\$\\-])'
+        'match': '(?<![\\w\\$\\-])(?:await|break|chain|continue|elif|expr-value|if|match|return|yield)(?![\\w\\$\\-])'
         'name': 'keyword.control.builtin.earl-grey'
+      }
+      {
+        'match': '(?:^\\s*|\\s+)else(?=\\:)'
+        'name': 'keyword.control.builtin.else.earl-grey'
       }
     ]
   operator:
