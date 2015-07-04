@@ -6,8 +6,8 @@
     'increaseIndentPattern': '(?x)
       (?:
           [\\w\\$]\\b.*(:)
-        | \\S\\s+([+\\-*/~^<>=%&|?!#]+)
+        | \\S\\s+([+\\-*/~^<>=%&|?!#\\{]+)
         | [^\\w\\$\\-](and|each|each\\*|is|with|mod|not|or|when|where)
       )
       \\s*$'
-    'decreaseIndentPattern': '^\\s*(catch|elif|else|finally)\\b.*:'
+    'decreaseIndentPattern': '^\\s*(?:(catch|elif|else|finally)\\b.*:|\\})'
