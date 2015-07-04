@@ -60,7 +60,7 @@ else:
    add everything: the-castle
 
 ;; nested if / elif / else test
-mad-function = bananas @->
+mad-function = bananas ->
    if bananas > 5:
       print "You've got a lot of bananas!"
    elif bananas == 5:
@@ -85,6 +85,14 @@ catch e:
    print "Some other error."
 finally:
    print "We are done."
+
+;; method shorthand operator
+stream-of-twos = *->
+   while [true]: yield 2 ;; need to fix literals with colons after them.
+
+;; gen shorthand operator
+full-name = @->
+   '{@first-name} {@last-name}'
 
 ;; Keyword highlight test
 key x

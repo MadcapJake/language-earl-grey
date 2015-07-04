@@ -51,7 +51,7 @@
   #   'name': 'meta.inline.function.bare.earl-grey'
   # }
   {
-    'match': '@?->'
+    'match': '[\\*@]?->'
     'name': 'storage.type.function.earl-grey'
   }
   {
