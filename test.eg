@@ -60,7 +60,7 @@ else:
    add everything: the-castle
 
 ;; nested if / elif / else test
-mad-function = bananas ->
+mad-function = bananas @->
    if bananas > 5:
       print "You've got a lot of bananas!"
    elif bananas == 5:
