@@ -75,7 +75,7 @@
     'name': 'constant.language.null.earl-grey'
   }
   {
-    'match': '(?:[^\\w\\$\\-])(?<!\\.)(this)(?!\\s*[:=][^=])(?:[^\\w\\$\\-])'
+    'match': '(?<![\\w\\$\\-\\.])(this)(?![\\w\\$\\-])'
     'name': 'variable.language.this.earl-grey'
   }
   {
