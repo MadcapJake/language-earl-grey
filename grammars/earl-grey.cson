@@ -148,6 +148,13 @@
       '2':
         'name': 'variable.assignment.earl-grey'
   }
+  {
+    'match': "(?x)
+      (?<![\\w\\-])
+      (Function|Object|Array|String|Number|Boolean)
+      (?![\\w\\-])"
+    'name': 'support.class.earl-grey'
+  }
 ]
 'repository':
   error:

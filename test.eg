@@ -54,6 +54,8 @@ obj.field = {
 ;; match statements
 match @awesome.great:
    {head, *tail} -> [print head; tail]
+   Array[]        -> convert(.arr)
+   String?       -> convert(.str)
    else          -> throw E.error("This is an error!")
 
 unimpl-func = -> pass
@@ -77,8 +79,7 @@ mad-function = bananas ->
 
 ;; class test
 class Dog:
-   constructor(@name, @breed) =
-      pass
+   constructor(@name, @breed) = pass
 
    bark(@, )
 
