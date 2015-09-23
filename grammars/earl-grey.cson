@@ -500,6 +500,10 @@
         'match': '(?:^\\s*|\\s+)else(?=\\:|\\s+->)'
         'name': 'keyword.control.builtin.else.earl-grey'
       }
+      {
+        'match': '(?<=\\s|^|[>=])pass(?=\\s|$)'
+        'name': 'keyword.other.pass.earl-grey'
+      }
     ]
   operator:
     'patterns': [
