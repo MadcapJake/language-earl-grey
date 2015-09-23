@@ -478,7 +478,7 @@
   method:
     'patterns': [
       {
-        'match': '(@(?:[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)?)(?=[\\s:,;\\{\\}\\[\\]\\(\\)])'
+        'match': '(@(?:[a-zA-Z$_0-9](?:[a-zA-Z$_0-9-]*[a-zA-Z$_0-9])?)?)(?=[\\s:\\.,;\\{\\}\\[\\]\\(\\)])'
         'name': 'entity.other.attribute-name.method.earl-grey'
       }
     ]
@@ -497,7 +497,7 @@
         'name': 'keyword.control.builtin.earl-grey'
       }
       {
-        'match': '(?:^\\s*|\\s+)else(?=\\:)'
+        'match': '(?:^\\s*|\\s+)else(?=\\:|\\s+->)'
         'name': 'keyword.control.builtin.else.earl-grey'
       }
     ]

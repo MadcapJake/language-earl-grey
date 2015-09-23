@@ -51,6 +51,11 @@ obj.field = {
    thatFunc = {x} -> x
 }
 
+;; match statements
+match @awesome.great:
+   {head, *tail} -> [print head; tail]
+   else          -> throw E.error("This is an error!")
+
 ;; if / elif / else test
 if coolness > 11:
    add something: something-else
@@ -93,6 +98,9 @@ stream-of-twos = *->
 ;; gen shorthand operator
 full-name = @->
    '{@first-name} {@last-name}'
+
+name-method = @->
+   @name.parents.full-name()
 
 ;; Keyword highlight test
 key x
