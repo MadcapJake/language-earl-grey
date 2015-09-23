@@ -79,7 +79,7 @@
     (?<![\\w\\-#\\.])
     (send|object|keys|items|enumerate|zip|product|neighbours|
     predicate|equal|nequal|contains|repr|clone|range|getChecker|
-    getProperty|getProjector|consume|take|promisify|spawn)
+    getProperty|getProjector|consume|take|promisify|spawn|constructor)
     (?![\\w\\-])'
     'name': 'support.function.earl-grey'
   }
