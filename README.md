@@ -7,6 +7,8 @@
 
 Adds syntax highlighting, snippets, autocomplete and folding support to [Earl Grey](http://breuleux.github.io/earl-grey/) files in Atom.
 
+![](https://raw.githubusercontent.com/MadcapJake/language-earl-grey/master/hl-example.png)
+
 ## Status
 
 Already a strong set of highlighting rules. Only some of the more advanced functionality has not been implemented. Many of these features would require using deeply nested patterns that someday I hope to implement. For a list of things that I'd like to add, see below. If you're interested in implementing one of these, let me know in gitter or through an issue/PR and I'd love to help.  Also, do give the current package a try and don't forget to let me know what needs fixing!
