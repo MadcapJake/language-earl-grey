@@ -81,7 +81,7 @@ mad-function = bananas ->
 class Dog:
    constructor(@name, @breed) = pass
 
-   bark(@, )
+   bark(@, sd)
 
 ;; error test
 try:
@@ -149,3 +149,5 @@ each-thing        ;; Do not highlight each
 sleep-in          ;; Do not highlight in
 before-each: xyz  ;; Highlight before-each as a keyword
 is-great: xyz     ;; Highlight is-great as a keyword
+
+send()

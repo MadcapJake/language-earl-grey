@@ -75,6 +75,15 @@
     'name': 'constant.language.null.earl-grey'
   }
   {
+    'match': '(?x)
+    (?<![\\w\\-#\\.])
+    (send|object|keys|items|enumerate|zip|product|neighbours|
+    predicate|equal|nequal|contains|repr|clone|range|getChecker|
+    getProperty|getProjector|consume|take|promisify|spawn)
+    (?![\\w\\-])'
+    'name': 'support.function.earl-grey'
+  }
+  {
     'match': '(?<![\\w\\$\\-\\.])(this)(?![\\w\\$\\-])'
     'name': 'variable.language.this.earl-grey'
   }
@@ -150,8 +159,8 @@
   }
   {
     'match': "(?x)
-      (?<![\\w\\-])
-      (Function|Object|Array|String|Number|Boolean)
+      (?<![\\w\\-\\.])
+      (Function|Object|Array|String|Number|Boolean|ErrorFactory|ENode|Promise)
       (?![\\w\\-])"
     'name': 'support.class.earl-grey'
   }
